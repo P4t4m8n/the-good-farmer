@@ -1,0 +1,3202 @@
+[
+  {
+    "name": "Tomato",
+    "family": "Solanaceae",
+    "season": "Summer",
+    "type": "Vegetable",
+    "description": "A juicy red fruit, widely considered a vegetable for culinary purposes, commonly used in salads, sauces, and cooking.",
+    "nutrition": {
+      "calories": 18,
+      "protein": 0.9,
+      "fat": 0.2,
+      "carbohydrates": 3.9,
+      "fiber": 1.2,
+      "vitamins": ["Vitamin C", "Vitamin K"],
+      "minerals": ["Potassium", "Folate"]
+    }
+  },
+  {
+    "name": "Apple",
+    "family": "Rosaceae",
+    "season": "Autumn",
+    "type": "Fruit",
+    "description": "A sweet and crisp fruit, available in various varieties such as Gala, Fuji, and Granny Smith, often eaten raw or in desserts.",
+    "nutrition": {
+      "calories": 52,
+      "protein": 0.3,
+      "fat": 0.2,
+      "carbohydrates": 13.8,
+      "fiber": 2.4,
+      "vitamins": ["Vitamin C", "Vitamin A"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Basil",
+    "family": "Lamiaceae",
+    "season": "Summer",
+    "type": "Herb",
+    "description": "An aromatic herb used in a variety of cuisines, especially Italian, often added fresh to dishes like pesto, salads, and sauces.",
+    "nutrition": {
+      "calories": 22,
+      "protein": 3.2,
+      "fat": 0.6,
+      "carbohydrates": 2.7,
+      "fiber": 1.6,
+      "vitamins": ["Vitamin A", "Vitamin K"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Carrot",
+    "family": "Apiaceae",
+    "season": "Autumn",
+    "type": "Vegetable",
+    "description": "A root vegetable commonly orange in color, known for its crisp texture and slightly sweet flavor, used in soups, salads, and snacks.",
+    "nutrition": {
+      "calories": 41,
+      "protein": 0.9,
+      "fat": 0.2,
+      "carbohydrates": 9.6,
+      "fiber": 2.8,
+      "vitamins": ["Vitamin A", "Vitamin K"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Strawberry",
+    "family": "Rosaceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A sweet and juicy red fruit, often eaten fresh or used in desserts, known for its characteristic flavor and aroma.",
+    "nutrition": {
+      "calories": 32,
+      "protein": 0.7,
+      "fat": 0.3,
+      "carbohydrates": 7.7,
+      "fiber": 2.0,
+      "vitamins": ["Vitamin C", "Folate"],
+      "minerals": ["Manganese", "Potassium"]
+    }
+  },
+  {
+    "name": "Cilantro",
+    "family": "Apiaceae",
+    "season": "Year-round",
+    "type": "Herb",
+    "description": "A flavorful herb widely used in Mexican, Indian, and Southeast Asian cuisines, known for its distinct taste and aroma.",
+    "nutrition": {
+      "calories": 23,
+      "protein": 2.1,
+      "fat": 0.5,
+      "carbohydrates": 3.7,
+      "fiber": 2.8,
+      "vitamins": ["Vitamin A", "Vitamin K"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Broccoli",
+    "family": "Brassicaceae",
+    "season": "Fall",
+    "type": "Vegetable",
+    "description": "A green vegetable known for its dense florets and high nutritional content, often steamed or stir-fried.",
+    "nutrition": {
+      "calories": 34,
+      "protein": 2.8,
+      "fat": 0.4,
+      "carbohydrates": 6.6,
+      "fiber": 2.6,
+      "vitamins": ["Vitamin C", "Vitamin K"],
+      "minerals": ["Iron", "Calcium"]
+    }
+  },
+  {
+    "name": "Blueberry",
+    "family": "Ericaceae",
+    "season": "Summer",
+    "type": "Fruit",
+    "description": "A small, blue-purple fruit known for its high antioxidant content, often eaten fresh or in smoothies and baked goods.",
+    "nutrition": {
+      "calories": 57,
+      "protein": 0.7,
+      "fat": 0.3,
+      "carbohydrates": 14.5,
+      "fiber": 2.4,
+      "vitamins": ["Vitamin C", "Vitamin K"],
+      "minerals": ["Manganese", "Copper"]
+    }
+  },
+  {
+    "name": "Garlic",
+    "family": "Amaryllidaceae",
+    "season": "Summer",
+    "type": "Herb",
+    "description": "A pungent bulb used as a seasoning in many dishes, particularly in Mediterranean and Asian cuisines.",
+    "nutrition": {
+      "calories": 149,
+      "protein": 6.4,
+      "fat": 0.5,
+      "carbohydrates": 33.1,
+      "fiber": 2.1,
+      "vitamins": ["Vitamin B6", "Vitamin C"],
+      "minerals": ["Manganese", "Selenium"]
+    }
+  },
+  {
+    "name": "Spinach",
+    "family": "Amaranthaceae",
+    "season": "Spring",
+    "type": "Vegetable",
+    "description": "A leafy green vegetable, rich in iron and other nutrients, often used in salads, smoothies, and cooked dishes.",
+    "nutrition": {
+      "calories": 23,
+      "protein": 2.9,
+      "fat": 0.4,
+      "carbohydrates": 3.6,
+      "fiber": 2.2,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Iron", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  },
+  {
+    "name": "Kale",
+    "family": "Brassicaceae",
+    "season": "Winter",
+    "type": "Vegetable",
+    "description": "A leafy green cruciferous vegetable known for its high vitamin content and often used in salads and smoothies.",
+    "nutrition": {
+      "calories": 49,
+      "protein": 4.3,
+      "fat": 0.9,
+      "carbohydrates": 8.8,
+      "fiber": 3.6,
+      "vitamins": ["Vitamin A", "Vitamin C"],
+      "minerals": ["Calcium", "Iron"]
+    }
+  },
+  {
+    "name": "Avocado",
+    "family": "Lauraceae",
+    "season": "Spring",
+    "type": "Fruit",
+    "description": "A creamy, nutrient-dense fruit known for its healthy fats, commonly used in guacamole, salads, and sandwiches.",
+    "nutrition": {
+      "calories": 160,
+      "protein": 2.0,
+      "fat": 15.0,
+      "carbohydrates": 8.5,
+      "fiber": 6.7,
+      "vitamins": ["Vitamin K", "Vitamin E"],
+      "minerals": ["Potassium", "Magnesium"]
+    }
+  }
+]
