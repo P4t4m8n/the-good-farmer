@@ -8,12 +8,15 @@ import CheckoutsOverlay from "../CheckoutShared/CheckoutsOverlay";
 interface Props {
   isDelivery: boolean;
   currentCity: string | null;
-  onChangeStage: (stage: TCheckoutStage) => void;
+  handleNextClick: (
+    e: React.MouseEvent<HTMLButtonElement>,
+    stage: TCheckoutStage
+  ) => void;
 }
 export default function CheckoutDelivery({
   isDelivery,
   currentCity,
-  onChangeStage,
+  handleNextClick,
 }: Props) {
   const [deliveries, setDeliveries] = useState<TDelivery[]>();
   const [currentDelivery, setCurrentDelivery] = useState<TDelivery>();
@@ -37,22 +40,6 @@ export default function CheckoutDelivery({
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const handleNextClick = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    stage: TCheckoutStage
-  ) => {
-    const form = (e.currentTarget.closest("form") as HTMLFormElement) || null;
-
-    // Check form validity
-    if (form && !form.checkValidity()) {
-      e.preventDefault(); // Prevent default action if form is invalid
-      form.reportValidity(); // Show validation feedback to the user
-      return;
-    }
-
-    onChangeStage(stage);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -126,4 +113,3 @@ export default function CheckoutDelivery({
     </div>
   );
 }
-

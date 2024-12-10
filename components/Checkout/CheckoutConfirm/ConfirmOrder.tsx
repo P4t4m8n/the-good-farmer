@@ -9,7 +9,10 @@ interface Props {
   deliveryPrice: number;
   isSubmitting: boolean;
   isConfirm: boolean;
-  onChangeStage: (stage: TCheckoutStage) => void;
+  handleNextClick: (
+    e: React.MouseEvent<HTMLButtonElement>,
+    stage: TCheckoutStage
+  ) => void;
 }
 
 const ConfirmOrder = ({
@@ -17,23 +20,8 @@ const ConfirmOrder = ({
   deliveryPrice,
   isSubmitting,
   isConfirm,
-  onChangeStage,
+  handleNextClick,
 }: Props) => {
-  const handleNextClick = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    stage: TCheckoutStage
-  ) => {
-    const form = (e.currentTarget.closest("form") as HTMLFormElement) || null;
-
-    // Check form validity
-    if (form && !form.checkValidity()) {
-      e.preventDefault(); // Prevent default action if form is invalid
-      form.reportValidity(); // Show validation feedback to the user
-      return;
-    }
-
-    onChangeStage(stage);
-  };
   return (
     <div className=" relative w-1/3 flex flex-col gap-4">
       <CheckoutsHeader text={"Payment Details"} />
