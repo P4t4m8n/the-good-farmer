@@ -41,7 +41,7 @@ export default function DialogWrapper({ children }: Props) {
       >
         <button
           onClick={handleClose}
-          className=" bg-black-2 text-white rounded-full w-6 h-6  rotate-45 mt-1"
+          className=" bg-dark-btn text-dark-text rounded-full w-6 h-6  rotate-45 mt-1"
         >
           {iconService.PlusSvg()}
         </button>

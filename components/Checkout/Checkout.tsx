@@ -1,13 +1,15 @@
 "use client";
 
 import { useActionState, useEffect, useRef } from "react";
-import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
+
 import { useCart } from "@/hooks/useCart";
-import CheckoutDelivery from "./CheckoutDelivery/CheckoutDelivery";
-import ConfirmOrder from "./CheckoutConfirm/ConfirmOrder";
 import { saveOrder } from "@/lib/actions/order.actions";
 import { orderClientService } from "@/lib/services/client/order.client.service";
 import { useStage } from "@/hooks/useStage";
+
+import CheckoutDelivery from "./CheckoutDelivery/CheckoutDelivery";
+import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
+import ConfirmOrder from "./CheckoutConfirm/ConfirmOrder";
 
 interface Props {
   order: IOrder;

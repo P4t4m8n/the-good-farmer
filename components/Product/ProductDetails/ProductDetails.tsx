@@ -42,7 +42,9 @@ export default function ProductDetailsModel({ product }: Props) {
 
   return (
     <div className="h-full w-full flex flex-col gap-4 mr-8">
-      <h1 className="underline text-2xl font-semibold font-title">{name}</h1>
+      <header>
+        <h1 className="underline text-2xl font-semibold font-title">{name}</h1>
+      </header>
       <div className="grid grid-cols-2 w-full h-full gap-4">
         <div className="flex flex-col place-content-between">
           <Image

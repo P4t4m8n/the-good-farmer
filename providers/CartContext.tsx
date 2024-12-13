@@ -36,12 +36,12 @@ export const CartProvider: FC<Props> = ({ children }) => {
   };
 
   const getAllCartItems = (): ICartItem[] | undefined => {
-    if (!cartItemsRef?.current) return;
+    if (!cartItemsRef?.current) return [];
 
-    let cartItems = Object.values(cartItemsRef?.current);
-    if (!cartItems.length) {
+    let cartItems = Object.values(cartItemsRef?.current) || [];
+    if (!hasCartItems()) {
       cartItems = localStorageClientService.getSessionData("cart") || [];
-      if (cartItems.length) {
+      if (cartItems?.length) {
         cartItemsRef.current = cartItems.reduce((acc, item) => {
           if (!item?.product?._id) return acc;
           acc[item.product._id] = item;
@@ -71,18 +71,17 @@ export const CartProvider: FC<Props> = ({ children }) => {
       };
     }
 
+    localStorageClientService.storeSessionData(
+      "cart",
+      Object.values(cartItemsRef.current)
+    );
     // Notify item-specific subscribers
     const itemSubscribers = itemSubscribersRef.current[productId];
     if (itemSubscribers) {
       itemSubscribers.forEach((callback) => callback());
     }
-
     // Notify cart-wide subscribers
     cartSubscribersRef.current.forEach((callback) => callback());
-    localStorageClientService.storeSessionData(
-      "cart",
-      Object.values(cartItemsRef.current)
-    );
   };
 
   const subscribe = (productId: string | null, callback: Subscriber) => {
@@ -114,13 +113,20 @@ export const CartProvider: FC<Props> = ({ children }) => {
   const clearCart = () => {
     cartItemsRef.current = {};
 
-    // Notify all subscribers
+    notifyAllSubscribers();
+    localStorageClientService.storeSessionData("cart");
+  };
+
+  const notifyAllSubscribers = () => {
     Object.values(itemSubscribersRef.current).forEach((subscribersSet) => {
       subscribersSet.forEach((callback) => callback());
     });
 
     cartSubscribersRef.current.forEach((callback) => callback());
-    localStorageClientService.storeSessionData("cart");
+  };
+
+  const hasCartItems = () => {
+    return Object.values(cartItemsRef?.current || {}).length > 0;
   };
 
   useEffect(() => {

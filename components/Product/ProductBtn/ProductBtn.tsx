@@ -1,62 +1,29 @@
 "use client";
 
-import { useCartItem } from "@/hooks/useCartItem";
-import { memo, useEffect, useState } from "react";
-import QuantityType from "./QuantityType";
+import QuantityTypeComponent from "./QuantityTypeComponent";
 import AmountChange from "./AmountChange";
 import { iconService } from "@/components/Icons/Icons";
+import { useProductBtn } from "@/hooks/useProductBtn";
 
 interface Props {
   productSmall: IProductSmall;
   styleMode: "page" | "cart";
 }
 
-const ProductBtn = memo(function ProductBtn({
-  productSmall,
-  styleMode,
-}: Props) {
-  const productId = productSmall._id!;
-  const { cartItem, updateCart } = useCartItem(productId);
-
-  const [quantityType, setQuantityType] = useState<
-    IQuantityType & { quantity: number }
-  >({
-    ...productSmall.quantityType[0],
-    quantity: cartItem?.quantity || 0,
-  });
-
-  useEffect(() => {
-    if (cartItem) {
-      const { quantityType: cartQuantityType, quantity } = cartItem;
-      setQuantityType({ ...cartQuantityType, quantity });
-    } else {
-      setQuantityType({ ...productSmall.quantityType[0], quantity: 0 });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cartItem]);
-
-  const handleAmountChange = (dir: number) => {
-    const amount = dir ? quantityType.quantity + dir : dir;
-    if (amount >= 0) {
-      updateCart(productSmall, quantityType, amount);
-    }
-  };
-  const handleQuantityTypeChange = (qType: IQuantityType) => {
-    setQuantityType((prev) => ({ ...qType, amount: prev.quantity }));
-    if (quantityType.quantity > 0) {
-      updateCart(productSmall, qType, quantityType.quantity);
-    }
-  };
-  const createQuantityTypeChangeHandler = (qType: IQuantityType) => () => {
-    handleQuantityTypeChange(qType);
-  };
+export default function ProductBtn({ productSmall, styleMode }: Props) {
+  const {
+    quantityType,
+    handleAmountChange,
+    createQuantityTypeChangeHandler,
+    productId,
+  } = useProductBtn(productSmall);
 
   const style =
     styleMode === "page" ? PRODUCT_BTN_PAGE_STYLE : PRODUCT_BTN_CART_STYLE;
 
   return (
     <div className={style.container}>
-      <QuantityType
+      <QuantityTypeComponent
         style={style.radioBtns}
         quantityTypes={productSmall.quantityType}
         quantityType={quantityType}
@@ -64,13 +31,11 @@ const ProductBtn = memo(function ProductBtn({
         createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}
       />
 
-      <h3 className={style.price}>
-        $
-        {quantityType.price -
-          (quantityType?.discount
-            ? quantityType?.price / quantityType?.discount
-            : 0)}
-      </h3>
+      <PriceCmp
+        price={quantityType?.price}
+        discount={quantityType?.discount}
+        style={style.price}
+      />
 
       <AmountChange
         style={style.btns}
@@ -79,25 +44,53 @@ const ProductBtn = memo(function ProductBtn({
       />
 
       {styleMode === "cart" && (
-        <button
-          onClick={(ev) => {
-            ev.stopPropagation();
-            ev.preventDefault();
-            handleAmountChange(0);
-          }}
-          className="w-4 h-4 fill-dark-text dark:fill-light-text"
-        >
-          {iconService.DeleteSvg()}
-        </button>
+        <DeleteItemBtn
+          handleAmountChange={handleAmountChange}
+          style={style.deleteBtn}
+        />
       )}
     </div>
   );
-});
+}
 
-export default ProductBtn;
+function PriceCmp({
+  price,
+  style,
+  discount,
+}: {
+  price: number;
+  style: string;
+  discount?: number;
+}) {
+  return (
+    <h3 className={style}>${price * (discount ? 1 - discount / 100 : 1)}</h3>
+  );
+}
+function DeleteItemBtn({
+  handleAmountChange,
+  style,
+}: {
+  handleAmountChange: (amount: number) => void;
+  style: string;
+}) {
+  return (
+    <button
+      onClick={(ev) => {
+        ev.stopPropagation();
+        ev.preventDefault();
+        handleAmountChange(0);
+      }}
+      className={style}
+    >
+      {iconService.DeleteSvg()}
+    </button>
+  );
+}
 
-// Module imports cause Tailwind to ignore classes, so the constants are defined here
-const PRODUCT_BTN_PAGE_STYLE: IProductStyleMode = {
+// Module imports cause Tailwind to ignore classes because Tailwind CSS scans the source files for class names during the build process.
+// If the class names are dynamically generated or imported from another module, Tailwind cannot detect and include them in the final CSS.
+
+const PRODUCT_BTN_PAGE_STYLE = {
   container:
     "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text",
   radioBtns: {
@@ -110,8 +103,9 @@ const PRODUCT_BTN_PAGE_STYLE: IProductStyleMode = {
     container: "flex items-center justify-center gap-4 text-center font-text",
     span: "text-lg",
   },
+  deleteBtn: "w-4 h-4 fill-dark-text dark:fill-light-text",
 };
-const PRODUCT_BTN_CART_STYLE: IProductStyleMode = {
+const PRODUCT_BTN_CART_STYLE = {
   container: "flex gap-4 ",
   radioBtns: {
     container: "flex gap-2 border rounded-3xl bg-inherit p-1",
@@ -125,4 +119,5 @@ const PRODUCT_BTN_CART_STYLE: IProductStyleMode = {
     span: "",
     svgSize: 4,
   },
+  deleteBtn: "w-4 h-4 fill-dark-text dark:fill-light-text",
 };

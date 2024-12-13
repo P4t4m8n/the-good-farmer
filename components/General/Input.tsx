@@ -2,6 +2,7 @@ interface Props {
   inputProps: TInput;
   error?: string;
   children?: React.ReactNode;
+  labelStyle?: string;
 }
 export default function Input({ inputProps, children, error }: Props) {
   const { id } = inputProps;
@@ -11,11 +12,7 @@ export default function Input({ inputProps, children, error }: Props) {
         {children && children}
         {error && <p className="text-red-500 text-sm">{error}</p>}
       </label>
-      <input
-        {...inputProps}
-      
-        
-      />
+      <input {...inputProps} />
     </div>
   );
 }

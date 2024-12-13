@@ -44,8 +44,10 @@ declare interface IProductFilter {
   limit?: number;
   skip?: number;
   isSmallProduct?: boolean;
+  _id?: string;
 }
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const PRODUCT_TYPE = [
   "vegetable",
   "fruit",
@@ -62,6 +64,7 @@ declare const PRODUCT_TYPE = [
 ] as const;
 declare type TProductType = (typeof PRODUCT_TYPE)[number];
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const VEG_SUB_PRODUCT_TYPE = [
   "garden vegetables",
   "greens",
@@ -74,6 +77,7 @@ declare const VEG_SUB_PRODUCT_TYPE = [
 ] as const;
 declare type TVegSubProductType = (typeof VEG_SUB_PRODUCT_TYPE)[number];
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const FRUIT_SUB_PRODUCT_TYPE = [
   "berries",
   "citrus",
@@ -84,6 +88,7 @@ declare const FRUIT_SUB_PRODUCT_TYPE = [
 ] as const;
 declare type TFruitSubProductType = (typeof FRUIT_SUB_PRODUCT_TYPE)[number];
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const LEGUME_SUB_PRODUCT_TYPE = [
   "lentils",
   "peas",
@@ -92,6 +97,7 @@ declare const LEGUME_SUB_PRODUCT_TYPE = [
 ] as const;
 declare type TLegumeSubProductType = (typeof LEGUME_SUB_PRODUCT_TYPE)[number];
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const SEASONS = [
   "spring",
   "summer",
@@ -101,6 +107,7 @@ declare const SEASONS = [
 ] as const;
 declare type TSeason = (typeof SEASONS)[number];
 
+// Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
 declare const QUANTITY_TYPE = [
   "lb",
   "oz",

@@ -18,14 +18,15 @@ export const useCart = () => {
 
   useEffect(() => {
     const handleChange = () => {
-      setCartItems(getAllCartItems());
+      const x = getAllCartItems();
+      setCartItems(x);
     };
     const unsubscribe = subscribe(null, handleChange);
     return () => {
       unsubscribe();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [getAllCartItems,subscribe]);
 
   return { cartItems, updateCart, onClearCart };
 };

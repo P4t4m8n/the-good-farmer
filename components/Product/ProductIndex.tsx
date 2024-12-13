@@ -3,20 +3,23 @@ import SideNav from "./SideNav";
 import SubProductList from "./SubProductList";
 
 interface Props {
+  productType: TProductType;
   products: IProductSmall[];
   subProductList: string[];
   subProductType: string;
 }
 
 export default function ProductIndex({
+  productType,
   products,
   subProductList,
   subProductType,
 }: Props) {
   return (
-    <div className="h-full relative flex w-full ">
+    <div className="h-full relative flex gap-4 w-full">
       <SideNav subProductList={subProductList} />
       <SubProductList
+        productType={productType}
         subProductType={subProductType}
         subProductList={subProductList}
       >
