@@ -1,7 +1,6 @@
 import Image from "next/image";
 import ProductBtn from "../ProductBtn/ProductBtn";
 import DetailList from "./DetailList";
-import NutritionItem from "./NutritionItem";
 import DetailItem from "./DetailItem";
 
 interface Props {
@@ -11,24 +10,21 @@ interface Props {
 export default function ProductDetailsModel({ product }: Props) {
   const {
     name = "",
-    imgsUrl = [],
-    family = "",
+    productFamily = "",
     season = "",
+    imgUrl = "/placeholder.png",
     productType = "other",
     subProductType = "other",
     description = "",
-    nutrition = {},
-    quantityType = [],
+    pricingDetails = [],
     _id = "",
   } = product || {};
-
-  const imgUrl = imgsUrl.length > 0 ? imgsUrl[0] : "/placeholder.png";
 
   const productSmall: IProductSmall = {
     _id,
     name,
     imgUrl,
-    quantityType,
+    pricingDetails,
     productType,
     subProductType,
   };
@@ -36,7 +32,7 @@ export default function ProductDetailsModel({ product }: Props) {
   const items = [
     { label: "Type", value: productType },
     { label: "Category", value: subProductType },
-    { label: "Family", value: family },
+    { label: "Family", value: productFamily },
     { label: "Growing season", value: season },
   ];
 
@@ -60,7 +56,6 @@ export default function ProductDetailsModel({ product }: Props) {
         </div>
         <div className="flex flex-col gap-2">
           <DetailList items={items} />
-          <NutritionItem nutrition={nutrition} />
         </div>
       </div>
       <ProductBtn productSmall={productSmall} styleMode="page" />

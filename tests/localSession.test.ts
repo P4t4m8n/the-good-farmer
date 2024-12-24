@@ -1,8 +1,4 @@
-import {
-  CART_DATA_EXPIRATION_TIME,
-  getSessionData,
-  storeSessionData,
-} from "@/lib/services/client/localSession.service";
+import { CART_DATA_EXPIRATION_TIME, localStorageClientService } from "@/lib/services/client/localSession.service";
 import LZString from "lz-string";
 
 jest.mock("lz-string");
@@ -44,7 +40,7 @@ describe("Session Data Utility", () => {
 
       (LZString.compressToUTF16 as jest.Mock).mockReturnValue(compressedData);
 
-      storeSessionData(key, data);
+      localStorageClientService.storeSessionData(key, data);
 
       expect(LZString.compressToUTF16).toHaveBeenCalledWith(
         JSON.stringify(data)
@@ -61,7 +57,7 @@ describe("Session Data Utility", () => {
     it("should remove the item from localStorage if no data is provided", () => {
       const key = "user";
 
-      storeSessionData(key);
+      localStorageClientService.storeSessionData(key);
 
       expect(localStorage.removeItem).toHaveBeenCalledWith(key);
     });
@@ -76,7 +72,7 @@ describe("Session Data Utility", () => {
         throw error;
       });
 
-      storeSessionData(key, data);
+      localStorageClientService.storeSessionData(key, data);
 
       expect(console.error).toHaveBeenCalledWith(
         "Error storing session data",
@@ -104,7 +100,7 @@ describe("Session Data Utility", () => {
         })
       );
 
-      const result = getSessionData<typeof decompressedData>(key);
+      const result = localStorageClientService.getSessionData<typeof decompressedData>(key);
 
       expect(LZString.decompressFromUTF16).toHaveBeenCalledWith(compressedData);
       expect(result).toEqual(decompressedData);
@@ -123,7 +119,7 @@ describe("Session Data Utility", () => {
         })
       );
 
-      const result = getSessionData(key);
+      const result = localStorageClientService.getSessionData(key);
 
       expect(localStorage.removeItem).toHaveBeenCalledWith(key);
       expect(result).toBeNull();
@@ -133,7 +129,7 @@ describe("Session Data Utility", () => {
       const key = "nonexistent";
 
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const result = getSessionData(key as any);
+      const result = localStorageClientService.getSessionData(key as any);
 
       expect(result).toBeNull();
     });
@@ -143,7 +139,7 @@ describe("Session Data Utility", () => {
 
       localStorage.setItem(key, "{ invalid json }");
 
-      const result = getSessionData(key);
+      const result = localStorageClientService.getSessionData(key);
 
       expect(console.error).toHaveBeenCalledWith(
         "Error parsing session data",
@@ -167,7 +163,7 @@ describe("Session Data Utility", () => {
         })
       );
 
-      const result = getSessionData(key);
+      const result = localStorageClientService.getSessionData(key);
 
       expect(result).toBeNull();
     });

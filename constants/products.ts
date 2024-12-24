@@ -7,7 +7,7 @@ export const PRODUCT_TYPE = [
   "legume",
   "nut",
   "spice",
-  "sea vegetables",
+  "seafood",
   "mushrooms",
   "grocery",
   "dairy",

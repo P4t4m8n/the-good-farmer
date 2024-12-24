@@ -25,7 +25,7 @@ export default function ProductBtn({ productSmall, styleMode }: Props) {
     <div className={style.container}>
       <QuantityTypeComponent
         style={style.radioBtns}
-        quantityTypes={productSmall.quantityType}
+        quantityTypes={productSmall.pricingDetails}
         quantityType={quantityType}
         productId={productId}
         createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}

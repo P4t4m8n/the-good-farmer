@@ -11,7 +11,7 @@ export default function CartListItem({ cartItem }: Props) {
       className="bg-light-btn dark:bg-dark-text h-fit p-2 flex justify-around items-center"
     >
       <Image
-        src={cartItem.product.imgUrl}
+        src={cartItem?.product?.imgUrl||"/no-image.png"}
         alt={cartItem.product.name}
         width={48}
         height={48}

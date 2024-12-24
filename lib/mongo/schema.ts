@@ -1,11 +1,15 @@
 import DatabaseService from "./db";
+import { IAddressDocument } from "./models/address.model";
+import { IOrderDocument } from "./models/order.model";
+import { IProductDocument } from "./models/product.model";
+import { IUserDocument } from "./models/user.model";
 
 export const createCollections = async () => {
   try {
     const db = await DatabaseService.getDb();
 
     // // User Collection
-    await db.createCollection("users", {
+    await db.createCollection<IUserDocument>("users", {
       validator: {
         $jsonSchema: {
           bsonType: "object",
@@ -34,7 +38,6 @@ export const createCollections = async () => {
             },
             imgUrl: {
               bsonType: "string",
-           
             },
           },
           // Either passwordHash or googleId is required allowed both
@@ -44,7 +47,7 @@ export const createCollections = async () => {
     });
 
     // Address Collection
-    await db.createCollection("addresses", {
+    await db.createCollection<IAddressDocument>("addresses", {
       validator: {
         $jsonSchema: {
           bsonType: "object",
@@ -85,7 +88,7 @@ export const createCollections = async () => {
     });
 
     // // Order Collection
-    await db.createCollection("orders", {
+    await db.createCollection<IOrderDocument>("orders", {
       validator: {
         $jsonSchema: {
           bsonType: "object",
@@ -210,7 +213,7 @@ export const createCollections = async () => {
     });
 
     // Product Collection
-    await db.createCollection("products", {
+    await db.createCollection<IProductDocument>("products", {
       validator: {
         $jsonSchema: {
           bsonType: "object",
@@ -220,15 +223,14 @@ export const createCollections = async () => {
               bsonType: "string",
               description: "Product name is required",
             },
-            imgsUrl: {
-              bsonType: "array",
-              items: { bsonType: "string" },
-              description: "List of image URLs",
+            imgUrl: {
+              bsonType: "string",
+              description: "Image",
             },
-            family: { bsonType: "string" },
+            productFamily : { bsonType: "string" },
             season: {
               bsonType: "string",
-              enum: ["spring", "summer", "fall", "winter", "year-round"],
+              enum: ["spring", "summer", "fall", "winter", "year-round","none"],
               description: "Season",
             },
             productType: {
@@ -241,7 +243,7 @@ export const createCollections = async () => {
                 "legume",
                 "nut",
                 "spice",
-                "sea vegetables",
+                "seafood",
                 "mushrooms",
                 "grocery",
                 "dairy",
@@ -257,7 +259,7 @@ export const createCollections = async () => {
               maximum: 5,
               description: "Product rating",
             },
-            quantityType: {
+            pricingDetails : {
               bsonType: "array",
               items: {
                 bsonType: "object",
@@ -286,18 +288,7 @@ export const createCollections = async () => {
                 },
               },
             },
-            nutrition: {
-              bsonType: "object",
-              properties: {
-                calories: { bsonType: "number", minimum: 0 },
-                protein: { bsonType: "number", minimum: 0 },
-                fat: { bsonType: "number", minimum: 0 },
-                carbohydrates: { bsonType: "number", minimum: 0 },
-                fiber: { bsonType: "number", minimum: 0 },
-                vitamins: { bsonType: "array", items: { bsonType: "string" } },
-                minerals: { bsonType: "array", items: { bsonType: "string" } },
-              },
-            },
+            isAvailableForSale : { bsonType: "bool" },
           },
         },
       },

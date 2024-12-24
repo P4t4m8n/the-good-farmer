@@ -26,6 +26,13 @@ export default function UserMenu() {
         imgUrl: user?.imgUrl,
       },
       {
+        text: "ADMIN",
+        style:
+          " flex justify-between items-center border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
+        link: "/admin",
+        iconSvg: iconService.LogoutSvg(),
+      },
+      {
         text: "LOGOUT",
         style:
           " flex justify-between items-center  pt-1 hover:text-dark-blue hover:font-semibold transition-all duration-300 w-full",

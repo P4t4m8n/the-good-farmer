@@ -4,9 +4,10 @@ import * as fs from "fs";
 import { fruits_veggies_data, fruits_veggies_img } from "./data";
 
 export async function seed() {
+  console.log("Seeding data...");
   const products = buildProductModels(fruits_veggies_data, fruits_veggies_img);
 
-  const x = loadJson("./products.json");
+  const x = loadJson("lib/mongo/jsons/products.json");
 
   const y = x.map((p: any) => {
     const quantityType = p.quantityType.map((qt: any) => ({
@@ -24,7 +25,12 @@ export async function seed() {
       minerals: p.nutrition.minerals,
     };
 
-    return { ...p, nutrition, quantityType };
+    const isAvailableSale: boolean = Math.random() > 0.5;
+
+    const imgUrl = p.imgsUrl[0];
+    delete p.imgsUrl;
+
+    return { ...p, nutrition, quantityType, isAvailableSale, imgUrl };
   });
   saveToJson(y, "./x.json");
 }

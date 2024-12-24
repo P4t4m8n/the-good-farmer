@@ -77,6 +77,43 @@ export const getProductById = async (
   }
 };
 
+export const saveProduct = async (state: IProduct, formData: FormData) => {
+  console.log("state:", state);
+  console.log("formData:", formData);
+  return {} as unknown as IProduct;
+};
+
+export const toggleProductAvailability = async (
+  state: boolean,
+  formData: FormData
+) => {
+  try {
+    const productId = new ObjectId(
+      xss(formData.get("productId")?.toString() || "")
+    );
+
+    const isOn = xss(formData.get("isAvailableSale")?.toString() || "");
+    const isAvailableSale = isOn === "on" ? true : false;
+    const productsCollection =
+      await DatabaseService.getCollection<IProductDocument>("products");
+    const { upsertedId } = await productsCollection.updateOne(
+      { _id: productId },
+      { $set: { isAvailableSale } }
+    );
+
+    if (!upsertedId) {
+      throw AppError.create(`Error toggling product availability`, 500, true);
+    }
+    return isAvailableSale;
+  } catch (error) {
+    throw AppError.create(
+      `Error toggling product availability ${error}`,
+      500,
+      true
+    );
+  }
+};
+
 /**
  * Builds a MongoDB match stage for product filtering.
  * @param filter - The filter criteria for products
@@ -97,6 +134,9 @@ const buildMatchStage = (filter: IProductFilter): MatchStage => {
     ...(productType && { productType }),
     ...(subProductType && { subProductType }),
     ...(_id && { _id: new ObjectId(_id) }),
+    ...(filter.isAvailableForSale != null && {
+      isAvailableSale: filter.isAvailableForSale,
+    }),
   };
 };
 
@@ -130,10 +170,11 @@ const buildPipeline = (
       $project: {
         _id: { $toString: "$_id" },
         name: 1,
-        imgUrl: { $arrayElemAt: ["$imgsUrl", 0] },
+        imgUrl: 1,
         productType: 1,
         subProductType: 1,
-        quantityType: 1,
+        pricingDetails: 1,
+        isAvailableForSale: 1,
       },
     });
   } else {
@@ -141,7 +182,7 @@ const buildPipeline = (
       $project: {
         _id: { $toString: "$_id" },
         name: 1,
-        imgsUrl: 1,
+        imgUrl: 1,
         family: 1,
         season: 1,
         productType: 1,
@@ -150,6 +191,7 @@ const buildPipeline = (
         rating: 1,
         quantityType: 1,
         nutrition: 1,
+        isAvailableSale: 1,
       },
     });
   }

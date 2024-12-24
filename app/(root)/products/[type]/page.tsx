@@ -22,12 +22,13 @@ export default async function ProductPage({
     limit: 1000,
     isSmallProduct: true,
   })) as IProductSmall[];
+  console.log("products:", products);
 
   const subProductList = productClientService.getProductSubList(productType);
 
   return (
     <ProductIndex
-    productType={productType}
+      productType={productType}
       products={products}
       subProductType={subProductType}
       subProductList={subProductList}

@@ -13,7 +13,7 @@ interface CartProvider {
   getCartItem: (productId: string) => ICartItem | undefined;
   updateCart: (
     product: IProductSmall,
-    quantityType: IQuantityType,
+    quantityType: IPricingDetails,
     amount: number
   ) => void;
   subscribe: (productId: string | null, callback: Subscriber) => () => void;
@@ -54,7 +54,7 @@ export const CartProvider: FC<Props> = ({ children }) => {
 
   const updateCart = (
     product: IProductSmall,
-    quantityType: IQuantityType,
+    quantityType: IPricingDetails,
     quantity: number
   ) => {
     if (!cartItemsRef?.current) return;

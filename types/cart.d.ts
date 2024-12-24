@@ -1,6 +1,6 @@
 declare interface ICartItem {
-    product: IProductSmall;
-    quantityType: IQuantityType;
-    quantity: number;
-    totalPrice: number;
-  }
+  product: IProductSmall;
+  quantityType: IPricingDetails;
+  quantity: number;
+  totalPrice: number;
+}

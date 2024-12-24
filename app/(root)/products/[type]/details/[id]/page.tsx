@@ -9,7 +9,7 @@ export default async function ProductDetailsPage({
 }) {
   const { id, type } = await params;
 
-  const product = await getProductById(id, false);
+  const product = await getProductById({ _id: id, isSmallProduct: false });
   if (!product) return redirect(`/products/${type}`);
 
   return <ProductDetailsModel product={product} />;

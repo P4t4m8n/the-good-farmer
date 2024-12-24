@@ -5,10 +5,10 @@ interface Props {
     container: string;
     label: string;
   };
-  quantityTypes: IQuantityType[];
-  quantityType: IQuantityType;
+  quantityTypes: IPricingDetails[];
+  quantityType: IPricingDetails;
   productId: string;
-  createQuantityTypeChangeHandler: (qType: IQuantityType) => () => void;
+  createQuantityTypeChangeHandler: (qType: IPricingDetails) => () => void;
 }
 
 export default function QuantityTypeComponent({

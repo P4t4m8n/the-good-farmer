@@ -39,3 +39,25 @@ export const APP_NAV_LINKS: {
     icon: "about",
   },
 ];
+
+export const ADMIN_NAV_LINKS: {
+  text: string;
+  href: string;
+}[] = [
+  {
+    text: "Products",
+    href: "/admin/products",
+  },
+  {
+    text: "Users",
+    href: "/admin/users",
+  },
+  {
+    text: "Orders",
+    href: "/admin/orders",
+  },
+  {
+    text: "Analytics",
+    href: "/admin/analytics",
+  },
+];

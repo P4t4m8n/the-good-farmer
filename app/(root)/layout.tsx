@@ -9,7 +9,7 @@ export default async function MainLayout({
   return (
     <>
       <Header />
-      <main className="pt-36  h-screen px-4">
+      <main className="pt-40 w-full gap-16  h-screen px-4 flex flex-col">
         {children} <Footer />
       </main>
     </>

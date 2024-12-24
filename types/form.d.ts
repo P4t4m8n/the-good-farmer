@@ -6,7 +6,15 @@ declare type TInputUserFormKeys =
   | "lastName";
 
 declare type TInput = {
-  type: "text" | "password" | "email" | "tel" | "number" | "radio"|"hidden";
+  type:
+    | "text"
+    | "password"
+    | "email"
+    | "tel"
+    | "number"
+    | "radio"
+    | "hidden"
+    | "checkbox";
   placeholder?: string;
   name: string;
   checked?: boolean;

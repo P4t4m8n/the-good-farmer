@@ -1,30 +1,20 @@
-declare interface IProduct extends IEntity {
-  name: string;
-  imgsUrl?: string[];
-  family?: string;
-  season?: TSeason;
-  productType: TProductType;
-  subProductType:
-    | TVegSubProductType
-    | TFruitSubProductType
-    | TLegumeSubProductType;
-  description?: string;
-  nutrition?: INutrition;
-  quantity?: number;
-  quantityType: IQuantityType[];
-  createdAt?: Date;
-  updatedAt?: Date;
-}
-
 declare interface IProductSmall extends IEntity {
   name: string;
-  imgUrl: string;
+  imgUrl?: string;
   productType: TProductType;
   subProductType:
     | TVegSubProductType
     | TFruitSubProductType
     | TLegumeSubProductType;
-  quantityType: IQuantityType[];
+  pricingDetails: IPricingDetails[];
+  isAvailableForSale?: boolean;
+}
+declare interface IProduct extends IProductSmall {
+  productFamily?: string;
+  season?: TSeason;
+  description?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 declare interface INutrition {
@@ -45,6 +35,8 @@ declare interface IProductFilter {
   skip?: number;
   isSmallProduct?: boolean;
   _id?: string;
+  season?: TSeason|string;
+  isAvailableForSale?: boolean | null;
 }
 
 // Duplicate the const declarations in constants/products.ts to avoid converting type files into modules
@@ -56,7 +48,7 @@ declare const PRODUCT_TYPE = [
   "legume",
   "nut",
   "spice",
-  "sea vegetables",
+  "seafood",
   "mushrooms",
   "grocery",
   "dairy",
@@ -104,6 +96,7 @@ declare const SEASONS = [
   "fall",
   "winter",
   "year-round",
+  "none",
 ] as const;
 declare type TSeason = (typeof SEASONS)[number];
 
@@ -119,7 +112,7 @@ declare const QUANTITY_TYPE = [
 ] as const;
 declare type TQuantityType = (typeof QUANTITY_TYPE)[number];
 
-declare interface IQuantityType {
+declare interface IPricingDetails {
   type: TQuantityType;
   price: number;
   quantity: number;

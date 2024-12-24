@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function ProductPreview({ product, styleMode }: Props) {
-  const { _id, name, imgUrl, quantityType, productType } = product;
+  const { _id, name, imgUrl, pricingDetails, productType } = product;
   const img = imgUrl && imgUrl !== "No image found" ? imgUrl : "/1.jpeg";
 
   const productSmall: IProductSmall = {
@@ -17,7 +17,7 @@ export default function ProductPreview({ product, styleMode }: Props) {
     imgUrl,
     productType: product.productType,
     subProductType: product.subProductType,
-    quantityType,
+    pricingDetails,
   };
 
   const style =

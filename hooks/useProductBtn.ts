@@ -6,9 +6,9 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
   const { cartItem, updateCart } = useCartItem(productId);
 
   const [quantityType, setQuantityType] = useState<
-    IQuantityType & { quantity: number }
+    IPricingDetails & { quantity: number }
   >({
-    ...product.quantityType[0],
+    ...product.pricingDetails[0],
     quantity: cartItem?.quantity || 0,
   });
 
@@ -17,7 +17,7 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
       const { quantityType: cartQuantityType, quantity } = cartItem;
       setQuantityType({ ...cartQuantityType, quantity });
     } else {
-      setQuantityType({ ...product.quantityType[0], quantity: 0 });
+      setQuantityType({ ...product.pricingDetails[0], quantity: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItem]);
@@ -28,13 +28,13 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
       updateCart(product as IProductSmall, quantityType, amount);
     }
   };
-  const handleQuantityTypeChange = (qType: IQuantityType) => {
+  const handleQuantityTypeChange = (qType: IPricingDetails) => {
     setQuantityType((prev) => ({ ...qType, amount: prev.quantity }));
     if (quantityType.quantity > 0) {
       updateCart(product as IProductSmall, qType, quantityType.quantity);
     }
   };
-  const createQuantityTypeChangeHandler = (qType: IQuantityType) => () => {
+  const createQuantityTypeChangeHandler = (qType: IPricingDetails) => () => {
     handleQuantityTypeChange(qType);
   };
 

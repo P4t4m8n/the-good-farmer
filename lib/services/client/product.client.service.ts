@@ -19,6 +19,22 @@ const getProductSubList = (type: TProductType): string[] => {
   }
 };
 
+
+const getEmptyProduct = (): IProduct => {
+  return {
+    name: "",
+    imgUrl: "",
+    productFamily: "",
+    season: undefined,
+    productType: "other",
+    subProductType: "other",
+    description: "",
+    pricingDetails: [],
+    _id: "",
+  };
+};
+
 export const productClientService = {
   getProductSubList,
+  getEmptyProduct
 };
