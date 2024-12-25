@@ -1,7 +1,6 @@
 import ProductEdit from "@/components/Admin/Products/Edit/ProductEdit";
 import { getProductById } from "@/lib/actions/product.actions";
 import { productClientService } from "@/lib/services/client/product.client.service";
-import React from "react";
 export async function generateStaticParams() {
   return [{ productId: "new" }];
 }

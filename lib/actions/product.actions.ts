@@ -92,19 +92,20 @@ export const toggleProductAvailability = async (
       xss(formData.get("productId")?.toString() || "")
     );
 
-    const isOn = xss(formData.get("isAvailableSale")?.toString() || "");
-    const isAvailableSale = isOn === "on" ? true : false;
+    const isOn = xss(formData.get("isAvailableForSale")?.toString() || "");
+    const isAvailableForSale = isOn === "on" ? true : false;
     const productsCollection =
       await DatabaseService.getCollection<IProductDocument>("products");
-    const { upsertedId } = await productsCollection.updateOne(
+    const { acknowledged } = await productsCollection.updateOne(
       { _id: productId },
-      { $set: { isAvailableSale } }
+      { $set: { isAvailableForSale } }
     );
 
-    if (!upsertedId) {
+    if (!acknowledged) {
       throw AppError.create(`Error toggling product availability`, 500, true);
     }
-    return isAvailableSale;
+
+    return isAvailableForSale;
   } catch (error) {
     throw AppError.create(
       `Error toggling product availability ${error}`,

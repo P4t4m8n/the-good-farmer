@@ -32,6 +32,7 @@ declare type TInput = {
   className?: string;
   validate?: (value: string) => string;
   readOnly?: boolean;
+  defaultChecked?: boolean;
 };
 
 declare interface ISelect extends TInput {

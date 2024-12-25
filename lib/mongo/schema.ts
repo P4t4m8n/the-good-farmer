@@ -217,7 +217,7 @@ export const createCollections = async () => {
       validator: {
         $jsonSchema: {
           bsonType: "object",
-          required: ["name", "productType"],
+          required: ["name", "productType", "pricePerKilo"],
           properties: {
             name: {
               bsonType: "string",
@@ -227,10 +227,17 @@ export const createCollections = async () => {
               bsonType: "string",
               description: "Image",
             },
-            productFamily : { bsonType: "string" },
+            productFamily: { bsonType: "string" },
             season: {
               bsonType: "string",
-              enum: ["spring", "summer", "fall", "winter", "year-round","none"],
+              enum: [
+                "spring",
+                "summer",
+                "fall",
+                "winter",
+                "year-round",
+                "none",
+              ],
               description: "Season",
             },
             productType: {
@@ -259,25 +266,29 @@ export const createCollections = async () => {
               maximum: 5,
               description: "Product rating",
             },
-            pricingDetails : {
+            pricePerKilo: {
+              bsonType: "number",
+              description: "Price per kilo is required",
+            },
+            pricingDetails: {
               bsonType: "array",
               items: {
                 bsonType: "object",
                 properties: {
-                  price: {
+                  weightPerType: {
                     bsonType: "number",
                     minimum: 0,
-                    description: "Price is required",
+                    description: "weight per type is required",
                   },
                   type: {
                     bsonType: "string",
                     enum: ["lb", "oz", "g", "kg", "unit", "pack", "bunch"],
                     description: "Quantity type",
                   },
-                  quantity: {
+                  stock: {
                     bsonType: "number",
                     minimum: 0,
-                    description: "Quantity is required",
+                    description: "Stock is required",
                   },
                   discount: {
                     bsonType: "number",
@@ -288,7 +299,7 @@ export const createCollections = async () => {
                 },
               },
             },
-            isAvailableForSale : { bsonType: "bool" },
+            isAvailableForSale: { bsonType: "bool" },
           },
         },
       },

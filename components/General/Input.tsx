@@ -17,7 +17,7 @@ export default function Input({
         {children && children}
         {error && <p className="text-red-500 text-sm">{error}</p>}
       </label>
-      <input {...inputProps} />
+      <input {...inputProps}  />
     </div>
   );
 }

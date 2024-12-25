@@ -19,7 +19,7 @@ export default function AdminProductPreview({ product }: Props) {
       <p className="w-32 truncate">{product.productType}</p>
       <ToggleAvailability
         productId={product._id!}
-        isAvailableSale={product?.isAvailableForSale || false}
+        isAvailableForSale={product?.isAvailableForSale || false}
       />
       <Link className="" href={`/admin/products/${product._id}`}>
         Edit

@@ -2,6 +2,7 @@ declare interface IProductSmall extends IEntity {
   name: string;
   imgUrl?: string;
   productType: TProductType;
+  pricePerKilo: number;
   subProductType:
     | TVegSubProductType
     | TFruitSubProductType
@@ -35,7 +36,7 @@ declare interface IProductFilter {
   skip?: number;
   isSmallProduct?: boolean;
   _id?: string;
-  season?: TSeason|string;
+  season?: TSeason | string;
   isAvailableForSale?: boolean | null;
 }
 
@@ -113,9 +114,9 @@ declare const QUANTITY_TYPE = [
 declare type TQuantityType = (typeof QUANTITY_TYPE)[number];
 
 declare interface IPricingDetails {
-  type: TQuantityType;
-  price: number;
-  quantity: number;
+  type?: TQuantityType;
+  weightPerType?: number;
+  stock?: number;
   discount?: number;
 }
 

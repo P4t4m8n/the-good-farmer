@@ -19,7 +19,6 @@ const getProductSubList = (type: TProductType): string[] => {
   }
 };
 
-
 const getEmptyProduct = (): IProduct => {
   return {
     name: "",
@@ -27,14 +26,16 @@ const getEmptyProduct = (): IProduct => {
     productFamily: "",
     season: undefined,
     productType: "other",
+    pricePerKilo: 0,
     subProductType: "other",
     description: "",
     pricingDetails: [],
     _id: "",
+    isAvailableForSale: false,
   };
 };
 
 export const productClientService = {
   getProductSubList,
-  getEmptyProduct
+  getEmptyProduct,
 };

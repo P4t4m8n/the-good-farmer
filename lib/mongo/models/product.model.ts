@@ -20,6 +20,7 @@ export interface IProductDocument extends Document {
   subProductType?: string; // string
   description?: string; // string
   rating?: number; // int, 0-5
+  pricePerKilo: number; // double required
   pricingDetails: IPricingDetails[]; // array of objects
   isAvailableForSale?: boolean; // boolean
 }

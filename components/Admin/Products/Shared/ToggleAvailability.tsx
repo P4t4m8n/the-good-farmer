@@ -5,15 +5,15 @@ import { useActionState } from "react";
 
 interface Props {
   productId: string;
-  isAvailableSale: boolean;
+  isAvailableForSale: boolean;
 }
 export default function ToggleAvailability({
   productId,
-  isAvailableSale,
+  isAvailableForSale,
 }: Props) {
   const [currentIsAvailableSale, formAction, isPending] = useActionState(
     toggleProductAvailability,
-    isAvailableSale
+    isAvailableForSale
   );
   console.log("isPending:", isPending);
   return (
@@ -22,8 +22,11 @@ export default function ToggleAvailability({
       <input
         type="checkbox"
         defaultChecked={currentIsAvailableSale}
-        name="isAvailableSale"
-        onChange={(e) => e.target.form?.submit()}
+        name="isAvailableForSale"
+        onChange={(e) => {
+        
+          e.target.form?.submit();
+        }}
       />
     </form>
   );

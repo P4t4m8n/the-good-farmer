@@ -1,11 +1,12 @@
 "use client";
-import { useActionState, useState } from "react";
+import { useActionState } from "react";
 import ImageUpload from "./ImageUpload";
 import { saveProduct } from "@/lib/actions/product.actions";
-import ProductType from "./ProductType";
 import Button from "@/components/General/Button";
 import Description from "./Description";
-import SubProductType from "./SubProductType";
+import Input from "@/components/General/Input";
+import ProductTypeIndex from "./ProductType/ProductTypeIndex";
+import PricingDetailsIndex from "./PricingDetails/PricingDetailsIndex";
 
 interface Props {
   product: IProduct;
@@ -15,9 +16,7 @@ export default function ProductEdit({ product }: Props) {
     saveProduct,
     product
   );
-  const [productTypeState, setProductTypeState] = useState<TProductType>(
-    product?.productType || "other"
-  );
+
   const {
     name = "",
     imgUrl = "/placeholder.png",
@@ -27,21 +26,54 @@ export default function ProductEdit({ product }: Props) {
   return (
     <form action={action} className="h-full w-full flex flex-col gap-4 mr-8">
       <header>
-        <input
-          name="name"
-          defaultValue={name}
-          className="underline text-2xl font-semibold font-title"
-        ></input>
+        <Input
+          inputProps={{
+            id: "name",
+            name: "name",
+            type: "text",
+            defaultValue: name,
+            className:
+              "underline text-2xl font-semibold font-title text-dark-text",
+          }}
+        >
+          Name:
+        </Input>
       </header>
 
       <ImageUpload imgUrl={imgUrl} />
-      <ProductType
-        productType={productTypeState}
-        setProductTypeState={setProductTypeState}
+      <ProductTypeIndex productType={product?.productType} />
+      <Input
+        inputProps={{
+          name: "productFamily",
+          type: "text",
+          defaultValue: product.productFamily,
+        }}
+      >
+        product family:
+      </Input>
+      <Input
+        inputProps={{
+          type: "text",
+          name: "season",
+          defaultValue: state.season,
+        }}
+      >
+        season:
+      </Input>
+      <Input
+        inputProps={{
+          type: "checkbox",
+          name: "isAvailableForSale",
+          defaultChecked: state.isAvailableForSale,
+        }}
+      >
+        isAvailableForSale:
+      </Input>
+      <PricingDetailsIndex
+        initialPricingDetails={state.pricingDetails}
+        pricePerKilo={state.pricePerKilo}
       />
-      <SubProductType productType={productTypeState} />
       <Description description={description} />
-
       <div className="flex flex-col gap-2"></div>
       <Button style="primary" size="large" disabled={loading} type="submit">
         Save
