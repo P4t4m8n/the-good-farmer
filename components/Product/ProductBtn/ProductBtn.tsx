@@ -12,7 +12,7 @@ interface Props {
 
 export default function ProductBtn({ productSmall, styleMode }: Props) {
   const {
-    quantityType,
+    pricingDetails,
     handleAmountChange,
     createQuantityTypeChangeHandler,
     productId,
@@ -26,20 +26,20 @@ export default function ProductBtn({ productSmall, styleMode }: Props) {
       <QuantityTypeComponent
         style={style.radioBtns}
         quantityTypes={productSmall.pricingDetails}
-        quantityType={quantityType}
+        pricingDetails={pricingDetails}
         productId={productId}
         createQuantityTypeChangeHandler={createQuantityTypeChangeHandler}
       />
 
       <PriceCmp
-        price={quantityType?.price}
-        discount={quantityType?.discount}
+        price={(pricingDetails?.weightPerType || 1) * productSmall.pricePerKilo}
+        discount={pricingDetails?.discount}
         style={style.price}
       />
 
       <AmountChange
         style={style.btns}
-        amount={quantityType.quantity}
+        amount={pricingDetails.quantity}
         handleAmountChange={handleAmountChange}
       />
 
@@ -62,9 +62,7 @@ function PriceCmp({
   style: string;
   discount?: number;
 }) {
-  return (
-    <h3 className={style}>${price * (discount ? 1 - discount / 100 : 1)}</h3>
-  );
+  return <h3 className={style}>${price * (discount ? discount : 1)}</h3>;
 }
 function DeleteItemBtn({
   handleAmountChange,
@@ -92,11 +90,11 @@ function DeleteItemBtn({
 
 const PRODUCT_BTN_PAGE_STYLE = {
   container:
-    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text",
+    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text justify-items-center",
   radioBtns: {
     container: "flex gap-2 border rounded-3xl bg-inherit p-1",
     label:
-      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text",
+      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text w-full",
   },
   price: "text-center text-lg font-title",
   btns: {

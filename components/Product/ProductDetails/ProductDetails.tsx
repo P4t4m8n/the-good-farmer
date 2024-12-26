@@ -17,6 +17,7 @@ export default function ProductDetailsModel({ product }: Props) {
     subProductType = "other",
     description = "",
     pricingDetails = [],
+    pricePerKilo = 1,
     _id = "",
   } = product || {};
 
@@ -27,6 +28,7 @@ export default function ProductDetailsModel({ product }: Props) {
     pricingDetails,
     productType,
     subProductType,
+    pricePerKilo,
   };
 
   const items = [

@@ -35,7 +35,7 @@ export default function CheckoutIndex({ order, addresses }: Props) {
     };
   }, [order, cartItems]);
 
-  const updatedSaveOrder = saveOrder.bind(null, orderToEdit.current);
+  // const updatedSaveOrder = saveOrder.bind(null, orderToEdit.current);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, formAction, isPending] = useActionState(
     saveOrder,
@@ -43,7 +43,7 @@ export default function CheckoutIndex({ order, addresses }: Props) {
   );
 
   return (
-    <form action={updatedSaveOrder} className="h-full w-full flex gap-4">
+    <form action={formAction} className="h-full w-full flex gap-4">
       <CheckoutDetails
         order={orderToEdit.current}
         addresses={addresses}

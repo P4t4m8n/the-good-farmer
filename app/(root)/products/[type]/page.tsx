@@ -22,7 +22,6 @@ export default async function ProductPage({
     limit: 1000,
     isSmallProduct: true,
   })) as IProductSmall[];
-  console.log("products:", products);
 
   const subProductList = productClientService.getProductSubList(productType);
 

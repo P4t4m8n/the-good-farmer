@@ -58,7 +58,7 @@ export const getAddresses = async (
 };
 
 export const saveAddress = async (
-  state: unknown,
+  _: IAddress,
   formData: FormData
 ): Promise<IAddress> => {
   try {

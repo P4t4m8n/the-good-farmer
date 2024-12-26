@@ -7,6 +7,7 @@ import Description from "./Description";
 import Input from "@/components/General/Input";
 import ProductTypeIndex from "./ProductType/ProductTypeIndex";
 import PricingDetailsIndex from "./PricingDetails/PricingDetailsIndex";
+import Select from "@/components/General/Select";
 
 interface Props {
   product: IProduct;
@@ -17,10 +18,18 @@ export default function ProductEdit({ product }: Props) {
     product
   );
 
+
   const {
     name = "",
     imgUrl = "/placeholder.png",
     description = "",
+    productType,
+    productFamily,
+    season,
+    isAvailableForSale,
+    pricingDetails,
+    pricePerKilo,
+    _id,
   } = (state as unknown as IProduct) || {};
 
   return (
@@ -38,40 +47,45 @@ export default function ProductEdit({ product }: Props) {
         >
           Name:
         </Input>
+        <Input inputProps={{ type: "hidden", name: "_id", value: _id }} />
       </header>
 
       <ImageUpload imgUrl={imgUrl} />
-      <ProductTypeIndex productType={product?.productType} />
+      <ProductTypeIndex productType={productType} />
       <Input
         inputProps={{
           name: "productFamily",
           type: "text",
-          defaultValue: product.productFamily,
+          className: "bg-dark-btn",
+
+          defaultValue: productFamily,
         }}
       >
         product family:
       </Input>
-      <Input
-        inputProps={{
-          type: "text",
+      <Select
+        options={["spring", "summer", "fall", "winter", "year-round", "none"]}
+        selectProps={{
           name: "season",
-          defaultValue: state.season,
+          defaultValue: season,
+          className: "bg-dark-btn",
         }}
       >
-        season:
-      </Input>
+        Season:
+      </Select>
+
       <Input
         inputProps={{
           type: "checkbox",
           name: "isAvailableForSale",
-          defaultChecked: state.isAvailableForSale,
+          defaultChecked: isAvailableForSale,
         }}
       >
         isAvailableForSale:
       </Input>
       <PricingDetailsIndex
-        initialPricingDetails={state.pricingDetails}
-        pricePerKilo={state.pricePerKilo}
+        initialPricingDetails={pricingDetails}
+        pricePerKilo={pricePerKilo}
       />
       <Description description={description} />
       <div className="flex flex-col gap-2"></div>

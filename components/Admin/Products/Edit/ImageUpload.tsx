@@ -1,7 +1,7 @@
 "use client";
 
 import { iconService } from "@/components/Icons/Icons";
-import { uploadImg } from "@/lib/services/client/uploadImg.client.service";
+// import { uploadImg } from "@/lib/services/client/uploadImg.client.service";
 import Image from "next/image";
 import { ChangeEvent, useState } from "react";
 
@@ -21,8 +21,16 @@ export default function ImageUpload({ imgUrl }: Props) {
         console.error("No file selected");
         return;
       }
-      const _imgUrl = await uploadImg(file);
-      setStateImgUrl(_imgUrl);
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        if (e.target?.result) {
+          setStateImgUrl(e.target.result as string);
+        }
+      };
+
+      reader.readAsDataURL(file);
+      // const _imgUrl = await uploadImg(file);
+      // setStateImgUrl(_imgUrl);
     } catch (error) {
       console.error("error:", error);
     } finally {

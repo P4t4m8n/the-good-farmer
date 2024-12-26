@@ -13,9 +13,12 @@ interface Props {
 
 export default function EditAddress({ setAddresses, address }: Props) {
   const isFirstRender = useRef(true);
-  const modelRef = useRef<HTMLDivElement>(null);
+  const modelRef = useRef<HTMLFormElement>(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
-  const [state, formAction, isPending] = useActionState(saveAddress, address);
+  const [state, formAction, isPending] = useActionState<IAddress, FormData>(
+    saveAddress,
+    address!
+  );
 
   //Ref to track the previous state
   const prevStateRef = useRef<IAddress | null | undefined>(null);
@@ -33,7 +36,7 @@ export default function EditAddress({ setAddresses, address }: Props) {
       setAddresses(state);
       setIsOpen(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
   const items: TInput[] = [
@@ -126,7 +129,7 @@ export default function EditAddress({ setAddresses, address }: Props) {
   ];
 
   return (
-    <div ref={modelRef}>
+    <div>
       <Button
         onClick={() => setIsOpen(true)}
         style="primary"
@@ -139,6 +142,7 @@ export default function EditAddress({ setAddresses, address }: Props) {
       {isOpen &&
         createPortal(
           <form
+            ref={modelRef}
             action={formAction}
             className="open-model fixed z-50 top-1/2 bg-light-btn dark:bg-dark-btn left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 w-96 aspect-square  grid gap-2 shadow-model rounded"
           >

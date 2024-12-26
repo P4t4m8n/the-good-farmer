@@ -5,7 +5,7 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
   const productId = product._id!;
   const { cartItem, updateCart } = useCartItem(productId);
 
-  const [quantityType, setQuantityType] = useState<
+  const [pricingDetails, setPricingDetails] = useState<
     IPricingDetails & { quantity: number }
   >({
     ...product.pricingDetails[0],
@@ -14,24 +14,24 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
 
   useEffect(() => {
     if (cartItem) {
-      const { quantityType: cartQuantityType, quantity } = cartItem;
-      setQuantityType({ ...cartQuantityType, quantity });
+      const { pricingDetails: cartQuantityType, quantity } = cartItem;
+      setPricingDetails({ ...cartQuantityType, quantity });
     } else {
-      setQuantityType({ ...product.pricingDetails[0], quantity: 0 });
+      setPricingDetails({ ...product.pricingDetails[0], quantity: 0 });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cartItem]);
 
   const handleAmountChange = (dir: number) => {
-    const amount = dir ? quantityType.quantity + dir : dir;
+    const amount = dir ? pricingDetails.quantity + dir : dir;
     if (amount >= 0) {
-      updateCart(product as IProductSmall, quantityType, amount);
+      updateCart(product as IProductSmall, pricingDetails, amount);
     }
   };
   const handleQuantityTypeChange = (qType: IPricingDetails) => {
-    setQuantityType((prev) => ({ ...qType, amount: prev.quantity }));
-    if (quantityType.quantity > 0) {
-      updateCart(product as IProductSmall, qType, quantityType.quantity);
+    setPricingDetails((prev) => ({ ...qType, quantity: prev?.quantity }));
+    if (pricingDetails.quantity > 0) {
+      updateCart(product as IProductSmall, qType, pricingDetails.quantity);
     }
   };
   const createQuantityTypeChangeHandler = (qType: IPricingDetails) => () => {
@@ -39,7 +39,7 @@ export const useProductBtn = (product: IProduct | IProductSmall) => {
   };
 
   return {
-    quantityType,
+    pricingDetails,
     productId,
     handleAmountChange,
     createQuantityTypeChangeHandler,

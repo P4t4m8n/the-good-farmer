@@ -6,7 +6,7 @@ interface Props {
     label: string;
   };
   quantityTypes: IPricingDetails[];
-  quantityType: IPricingDetails;
+  pricingDetails: IPricingDetails;
   productId: string;
   createQuantityTypeChangeHandler: (qType: IPricingDetails) => () => void;
 }
@@ -14,27 +14,30 @@ interface Props {
 export default function QuantityTypeComponent({
   style,
   quantityTypes,
-  quantityType,
+  pricingDetails,
   productId,
   createQuantityTypeChangeHandler,
 }: Props) {
+  console.log("pricingDetails:", pricingDetails)
+  console.log("quantityTypes:", quantityTypes)
   return (
     <ul className={style.container}>
       {quantityTypes?.map((qType) => (
-        <li key={qType?.type}>
+        <li key={qType?.type} className="w-full">
           <Input
             inputProps={{
               type: "radio",
               id: `${qType?.type}${productId || "1"}`,
-              name: qType?.type,
+              name: qType?.type || "kg",
               className: "hidden",
-              checked: quantityType?.type === qType?.type,
+              checked: pricingDetails?.type === qType?.type,
               onChange: createQuantityTypeChangeHandler(qType),
             }}
+            divStyle="w-full"
           >
             <label
               className={`${style.label} ${
-                quantityType?.type === qType?.type
+                pricingDetails?.type === qType?.type
                   ? "bg-dark-btn text-light-text dark:bg-light-btn dark:text-dark-text"
                   : ""
               }`}

@@ -52,8 +52,9 @@ const fromDataToOrderDto = (
 ): IOrderDtoCreate => {
   const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
   const addressId = new ObjectId(
-    xss(formData.get("addressId")?.toString() || "")
+    xss(formData.get("addressId")?.toString().split(",")[0] || "")
   );
+  console.log("addressId:", addressId);
   const deliveryDate = new Date(
     xss(formData.get("deliveryDate")?.toString() || "")
   );
@@ -69,7 +70,7 @@ const fromDataToOrderDto = (
   const orderItems = products.map((product) => {
     return {
       productId: new ObjectId(product.product._id),
-      quantityType: product.quantityType.type,
+      quantityType: product.pricingDetails.type as TQuantityType,
       quantity: product.quantity,
       totalPrice: product.totalPrice,
     };

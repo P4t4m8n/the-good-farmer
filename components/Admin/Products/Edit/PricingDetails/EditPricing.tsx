@@ -13,12 +13,15 @@ export default function EditPricing({
   idx,
   onChange,
 }: Props) {
+  console.log("pricingDetails:", pricingDetails);
   return (
     <ul className="flex gap-4 bg-slate-700">
       <Input
         inputProps={{
           type: "number",
           name: `weightPerType-${idx}`,
+          id: `weightPerType-${idx}`,
+          step:"any",
           defaultValue: pricingDetails?.weightPerType?.toString(),
           className: "bg-dark-btn",
           onChange: (e) => onChange(idx, "weightPerType", e.target.value),
@@ -30,6 +33,7 @@ export default function EditPricing({
         inputProps={{
           type: "number",
           name: `stock-${idx}`,
+          id: `stock-${idx}`,
           defaultValue: pricingDetails?.stock?.toString(),
           className: "bg-dark-btn",
           onChange: (e) => onChange(idx, "stock", e.target.value),
@@ -41,7 +45,10 @@ export default function EditPricing({
         inputProps={{
           type: "number",
           name: `discount-${idx}`,
-          defaultValue: pricingDetails?.weightPerType?.toString(),
+          id: `discount-${idx}`,
+          step:"any",
+
+          defaultValue: pricingDetails?.discount?.toString(),
           className: "bg-dark-btn",
           onChange: (e) => onChange(idx, "discount", e.target.value),
         }}
@@ -51,6 +58,7 @@ export default function EditPricing({
       <Select
         selectProps={{
           name: `quantityType-${idx}`,
+          id: `quantityType-${idx}`,
           value: pricingDetails?.type,
           className: "bg-dark-btn",
           onChange: (e) => onChange(idx, "type", e.target.value),

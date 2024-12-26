@@ -15,7 +15,6 @@ export default function ToggleAvailability({
     toggleProductAvailability,
     isAvailableForSale
   );
-  console.log("isPending:", isPending);
   return (
     <form action={formAction}>
       <input type="hidden" value={productId} name="productId" />
@@ -23,9 +22,9 @@ export default function ToggleAvailability({
         type="checkbox"
         defaultChecked={currentIsAvailableSale}
         name="isAvailableForSale"
+        disabled={isPending}
         onChange={(e) => {
-        
-          e.target.form?.submit();
+          e.target.form?.requestSubmit();
         }}
       />
     </form>

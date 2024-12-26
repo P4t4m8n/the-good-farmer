@@ -29,7 +29,7 @@ const getEmptyProduct = (): IProduct => {
     pricePerKilo: 0,
     subProductType: "other",
     description: "",
-    pricingDetails: [],
+    pricingDetails: [{ weightPerType: 1.0, stock: 1, discount: 0.0, type: "kg" }],
     _id: "",
     isAvailableForSale: false,
   };

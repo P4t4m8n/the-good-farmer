@@ -13,7 +13,7 @@ interface CartProvider {
   getCartItem: (productId: string) => ICartItem | undefined;
   updateCart: (
     product: IProductSmall,
-    quantityType: IPricingDetails,
+    pricingDetails: IPricingDetails,
     amount: number
   ) => void;
   subscribe: (productId: string | null, callback: Subscriber) => () => void;
@@ -54,7 +54,7 @@ export const CartProvider: FC<Props> = ({ children }) => {
 
   const updateCart = (
     product: IProductSmall,
-    quantityType: IPricingDetails,
+    pricingDetails: IPricingDetails,
     quantity: number
   ) => {
     if (!cartItemsRef?.current) return;
@@ -65,9 +65,13 @@ export const CartProvider: FC<Props> = ({ children }) => {
     } else {
       cartItemsRef.current[productId] = {
         product,
-        quantityType,
+        pricingDetails,
         quantity,
-        totalPrice: quantity * quantityType.price,
+        totalPrice:
+          (quantity *
+            (pricingDetails?.weightPerType || 1) *
+            product.pricePerKilo) *
+          (pricingDetails?.discount || 1),
       };
     }
 

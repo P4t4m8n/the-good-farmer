@@ -1,4 +1,4 @@
-import { Document } from "mongodb";
+import { Document, ObjectId } from "mongodb";
 
 type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round" | "none";
 
@@ -12,6 +12,7 @@ type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round" | "none";
 //   minerals?: string[]; // array of strings
 // }
 export interface IProductDocument extends Document {
+  _id?: ObjectId; // string
   name: string; // required
   imgUrl?: string; // string of CDN url
   productFamily: string; // string

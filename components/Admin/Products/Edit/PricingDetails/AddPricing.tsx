@@ -5,11 +5,7 @@ import { useModel } from "@/hooks/useModel";
 
 import { useRef } from "react";
 
-interface Props {
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-export default function AddPricing({ onChange }: Props) {
+export default function AddPricing() {
   const modelRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useModel(modelRef);

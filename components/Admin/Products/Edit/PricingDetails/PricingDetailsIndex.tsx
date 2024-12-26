@@ -4,21 +4,21 @@ import Button from "@/components/General/Button";
 import Input from "@/components/General/Input";
 
 interface Props {
-  initialPricingDetails: IPricingDetails[];
-  pricePerKilo: number;
+  initialPricingDetails?: IPricingDetails[];
+  pricePerKilo?: number;
 }
 export default function PricingDetailsIndex({
   initialPricingDetails,
   pricePerKilo,
 }: Props) {
   const [pricingDetails, setPricingDetails] = useState([
-    ...initialPricingDetails,
+    ...(initialPricingDetails || []),
   ]);
 
   const addPricingDetail = () => {
     setPricingDetails((prev) => [
       ...prev,
-      { weightPerType: 1, stock: 1, discount: 0, type: "kg" },
+      { weightPerType: 1.0, stock: 1, discount: 0.0, type: "kg" },
     ]);
   };
 
@@ -29,7 +29,14 @@ export default function PricingDetailsIndex({
   const onChange = (idx: number, key: keyof IPricingDetails, value: string) => {
     setPricingDetails((prev) => {
       const newPricingDetails = [...prev];
-      newPricingDetails[idx][key] = value as never;
+      // Ensure the indexed item exists
+      if (newPricingDetails[idx]) {
+        newPricingDetails[idx][key] =
+          key === "weightPerType" || key === "stock" || key === "discount"
+            ? (parseFloat(value) as never) // Assign as a number
+            : (value as never); // Assign as a string
+      }
+
       return newPricingDetails;
     });
   };
@@ -40,7 +47,8 @@ export default function PricingDetailsIndex({
         inputProps={{
           type: "number",
           name: "pricePerKilo",
-          defaultValue: pricePerKilo.toString(),
+          defaultValue: pricePerKilo?.toString(),
+          className: "bg-dark-btn",
         }}
       >
         Price per kilo:

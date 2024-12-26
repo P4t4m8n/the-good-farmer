@@ -7,6 +7,8 @@ const getDeliveryDates = (
   time: string;
   date: string;
 }[] => {
+  console.log("address:", address);
+  //TODO: Implement logic to get delivery dates base on address
   const dates = [];
   const today = new Date();
 

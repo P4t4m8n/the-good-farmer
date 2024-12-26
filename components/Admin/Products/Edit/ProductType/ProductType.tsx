@@ -14,7 +14,6 @@ export default function ProductType({
   const productsTypes = PRODUCT_TYPE.map((type) => type.toString());
 
   const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log("e.target.value:", e.target.value);
     setProductTypeState(e.target.value as TProductType);
   };
   return (

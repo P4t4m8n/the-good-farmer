@@ -16,7 +16,7 @@ export default function CheckoutAddressList({ addresses }: Props) {
             inputProps={{
               type: "radio",
               name: "addressId",
-              id: address._id,
+              id: address?._id,
               defaultValue: `${address._id},${address.city}`,
               required: true,
               className: "sr-only",

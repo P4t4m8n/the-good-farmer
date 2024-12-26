@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
 import bcrypt from "bcrypt";
@@ -11,7 +10,7 @@ import { authServerService } from "../services/server/auth.server.service";
 import { AppError } from "../services/utils/AppError.server";
 
 export const signIn = async (
-  state: any,
+  _: unknown,
   formData: FormData
 ): Promise<IUser> => {
   try {
@@ -53,7 +52,7 @@ export const signIn = async (
 };
 
 export const signUp = async (
-  state: any,
+  _: unknown,
   formData: FormData
 ): Promise<IUser> => {
   try {

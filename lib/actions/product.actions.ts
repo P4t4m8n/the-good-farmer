@@ -5,6 +5,7 @@ import DatabaseService from "../mongo/db";
 import { AppError } from "../services/utils/AppError.server";
 import { IProductDocument } from "../mongo/models/product.model";
 import xss from "xss";
+import { productServerService } from "../services/server/product.service";
 
 type MatchStage = {
   name?: { $regex: string; $options: string };
@@ -77,14 +78,51 @@ export const getProductById = async (
   }
 };
 
-export const saveProduct = async (state: IProduct, formData: FormData) => {
+export const saveProduct = async (
+  state: IProduct,
+  formData: FormData
+): Promise<IProduct> => {
   console.log("state:", state);
-  console.log("formData:", formData);
-  return {} as unknown as IProduct;
+  try {
+    const dto = await productServerService.formDataToProductDto(formData);
+    console.log("dto:", dto);
+
+    if (Object.values(dto).some((v) => v === null)) {
+      throw AppError.create(
+        `Invalid form data: Missing or invalid required fields.`,
+        400,
+        true
+      );
+    }
+
+    if (!dto?.imgUrl) {
+      dto.imgUrl = state.imgUrl || "";
+    }
+    const productsCollection =
+      await DatabaseService.getCollection<IProductDocument>("products");
+
+    // Prepare query and document for upsert
+
+    const { acknowledged, upsertedId } = await productsCollection.updateOne(
+      { _id: new ObjectId(dto?._id) },
+      { $set: dto },
+      { upsert: true }
+    );
+
+    if (!acknowledged) {
+      throw AppError.create(`Error saving product`, 500, true);
+    }
+    return {
+      ...(dto as IProduct),
+      _id: upsertedId?.toString() || dto._id?.toString(),
+    };
+  } catch (error) {
+    throw AppError.create(`Error saving product ${error}`, 500, true);
+  }
 };
 
 export const toggleProductAvailability = async (
-  state: boolean,
+  _: boolean,
   formData: FormData
 ) => {
   try {
@@ -176,6 +214,7 @@ const buildPipeline = (
         subProductType: 1,
         pricingDetails: 1,
         isAvailableForSale: 1,
+        pricePerKilo: 1,
       },
     });
   } else {
@@ -184,15 +223,15 @@ const buildPipeline = (
         _id: { $toString: "$_id" },
         name: 1,
         imgUrl: 1,
-        family: 1,
+        productFamily: 1,
         season: 1,
         productType: 1,
         subProductType: 1,
         description: 1,
         rating: 1,
-        quantityType: 1,
-        nutrition: 1,
+        pricingDetails: 1,
         isAvailableSale: 1,
+        pricePerKilo: 1,
       },
     });
   }

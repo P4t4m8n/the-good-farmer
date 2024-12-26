@@ -8,9 +8,11 @@ import { orderServerService } from "../services/server/order.server.service";
 import { AppError } from "../services/utils/AppError.server";
 
 export const saveOrder = async (state: IOrder, formData: FormData) => {
+  console.log("formData:", formData)
   let url = "/checkout/payment/";
   try {
     const dto = orderServerService.fromDataToOrderDto(formData, state.products);
+    console.log("dto:", dto)
     const orderCollection = await DatabaseService.getCollection<IOrderDocument>(
       "orders"
     );
@@ -87,7 +89,7 @@ export const getOrderById = async (
   }
 };
 
-export const chargeCreditCard = async (state: unknown, formData: FormData) => {
+export const chargeCreditCard = async (_: unknown, formData: FormData) => {
   let url = "/checkout/success";
   try {
     const CC = orderServerService.formDataToCreditCard(formData);
