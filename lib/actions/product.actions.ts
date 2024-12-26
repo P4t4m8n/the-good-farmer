@@ -82,10 +82,8 @@ export const saveProduct = async (
   state: IProduct,
   formData: FormData
 ): Promise<IProduct> => {
-  console.log("state:", state);
   try {
     const dto = await productServerService.formDataToProductDto(formData);
-    console.log("dto:", dto);
 
     if (Object.values(dto).some((v) => v === null)) {
       throw AppError.create(

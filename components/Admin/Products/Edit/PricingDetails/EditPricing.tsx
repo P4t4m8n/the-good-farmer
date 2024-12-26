@@ -13,7 +13,6 @@ export default function EditPricing({
   idx,
   onChange,
 }: Props) {
-  console.log("pricingDetails:", pricingDetails);
   return (
     <ul className="flex gap-4 bg-slate-700">
       <Input

@@ -54,7 +54,6 @@ const fromDataToOrderDto = (
   const addressId = new ObjectId(
     xss(formData.get("addressId")?.toString().split(",")[0] || "")
   );
-  console.log("addressId:", addressId);
   const deliveryDate = new Date(
     xss(formData.get("deliveryDate")?.toString() || "")
   );

@@ -8,11 +8,9 @@ import { orderServerService } from "../services/server/order.server.service";
 import { AppError } from "../services/utils/AppError.server";
 
 export const saveOrder = async (state: IOrder, formData: FormData) => {
-  console.log("formData:", formData)
   let url = "/checkout/payment/";
   try {
     const dto = orderServerService.fromDataToOrderDto(formData, state.products);
-    console.log("dto:", dto)
     const orderCollection = await DatabaseService.getCollection<IOrderDocument>(
       "orders"
     );

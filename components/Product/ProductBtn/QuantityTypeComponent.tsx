@@ -18,8 +18,7 @@ export default function QuantityTypeComponent({
   productId,
   createQuantityTypeChangeHandler,
 }: Props) {
-  console.log("pricingDetails:", pricingDetails)
-  console.log("quantityTypes:", quantityTypes)
+
   return (
     <ul className={style.container}>
       {quantityTypes?.map((qType) => (

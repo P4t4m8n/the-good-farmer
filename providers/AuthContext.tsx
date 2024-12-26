@@ -52,8 +52,7 @@ export const AuthProvider: FC<Props> = ({
     fetchUser();
   }, []);
 
-  const login = async (formData: FormData) => {
-    console.log("formData:", formData)
+  const login = async (_: FormData) => {
     try {
       //   const user = await authClientService.login(formData);
       //   if (!user) {
@@ -69,8 +68,7 @@ export const AuthProvider: FC<Props> = ({
     }
   };
 
-  const signUp = async (formData: FormData) => {
-    console.log("formData:", formData)
+  const signUp = async (_: FormData) => {
     try {
       //   const user = await authClientService.signUp(formData);
       //   if (!user) {
