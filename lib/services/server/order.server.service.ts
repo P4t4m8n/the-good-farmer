@@ -1,6 +1,6 @@
 import xss from "xss";
 import { ObjectId } from "mongodb";
-import { IOrderDtoCreate } from "@/lib/mongo/models/order.model";
+import { IOrderDtoCreate } from "@/lib/db/models/order.model";
 
 const getEmpty = (user: IUser): IOrder => {
   return {

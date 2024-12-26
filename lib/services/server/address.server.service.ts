@@ -3,7 +3,7 @@ import { ObjectId } from "mongodb";
 import {
   IAddressDtoCreate,
   IAddressDtoUpdate,
-} from "@/lib/mongo/models/address.model";
+} from "@/lib/db/models/address.model";
 import { addressClientService } from "../client/address.client.service";
 
 const formDataToDTO = (

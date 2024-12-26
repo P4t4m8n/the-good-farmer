@@ -2,10 +2,10 @@
 
 import bcrypt from "bcrypt";
 import { SignJWT, jwtVerify } from "jose";
-import DatabaseService from "../mongo/db";
+import DatabaseService from "../db/db";
 import { cookies } from "next/headers";
 import { getUserById } from "./user.actions";
-import { IUserDocument } from "../mongo/models/user.model";
+import { IUserDocument } from "../db/models/user.model";
 import { authServerService } from "../services/server/auth.server.service";
 import { AppError } from "../services/utils/AppError.server";
 

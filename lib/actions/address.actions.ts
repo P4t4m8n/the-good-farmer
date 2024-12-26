@@ -1,11 +1,11 @@
 "use server";
 
 import { ObjectId } from "mongodb";
-import DatabaseService from "../mongo/db";
+import DatabaseService from "../db/db";
 import {
   IAddressDocument,
   IAddressDtoUpdate,
-} from "../mongo/models/address.model";
+} from "../db/models/address.model";
 import { AppError } from "../services/utils/AppError.server";
 import { addressServerService } from "../services/server/address.server.service";
 

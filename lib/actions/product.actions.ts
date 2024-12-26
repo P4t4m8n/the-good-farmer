@@ -1,9 +1,9 @@
 "use server";
 
 import { ObjectId } from "mongodb";
-import DatabaseService from "../mongo/db";
+import DatabaseService from "../db/db";
 import { AppError } from "../services/utils/AppError.server";
-import { IProductDocument } from "../mongo/models/product.model";
+import { IProductDocument } from "../db/models/product.model";
 import xss from "xss";
 import { productServerService } from "../services/server/product.service";
 

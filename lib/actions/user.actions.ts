@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
-import DatabaseService from "../mongo/db";
-import { IUserDocument } from "../mongo/models/user.model";
+import DatabaseService from "../db/db";
+import { IUserDocument } from "../db/models/user.model";
 import { AppError } from "../services/utils/AppError.server";
 
 export const getUserById = async (userId: string): Promise<IUser | null> => {

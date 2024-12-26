@@ -1,8 +1,8 @@
 "use server";
 
 import { redirect } from "next/navigation";
-import DatabaseService from "../mongo/db";
-import { IOrderDocument } from "../mongo/models/order.model";
+import DatabaseService from "../db/db";
+import { IOrderDocument } from "../db/models/order.model";
 import { ObjectId } from "mongodb";
 import { orderServerService } from "../services/server/order.server.service";
 import { AppError } from "../services/utils/AppError.server";
