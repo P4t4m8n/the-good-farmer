@@ -20,4 +20,4 @@ declare interface IMenu {
   items: IMenuItem[];
 }
 
-
+declare type TStyleMode = "card" | "cart";

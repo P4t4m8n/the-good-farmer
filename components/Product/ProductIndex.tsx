@@ -16,7 +16,7 @@ export default function ProductIndex({
   subProductType,
 }: Props) {
   return (
-    <div className="h-full relative flex gap-4 w-full">
+    <div className="h-full relative flex gap-4 self-center w-full px-16">
       <SideNav subProductList={subProductList} />
       <SubProductList
         productType={productType}
@@ -26,7 +26,7 @@ export default function ProductIndex({
         <li
           key={subProductType}
           id={subProductType}
-          className=" scroll-mt-[9.5rem] pt-16 "
+          className=" scroll-mt-[10rem] pt-16 "
         >
           <h3 className="text-4xl font-title pb-8">{subProductType}</h3>
           <ProductList products={products} styleMode="page" />

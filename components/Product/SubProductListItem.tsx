@@ -13,7 +13,7 @@ export default function SubProductListItem({ subProduct, productType }: Props) {
   useIntersectionObserver(observerRef, [products], fetchProducts);
 
   return (
-    <li key={subProduct} id={subProduct} className=" scroll-mt-[9.5rem] pt-16 ">
+    <li key={subProduct} id={subProduct} className="scroll-mt-[14rem] pb-64 ">
       <h3 className="text-4xl font-title pb-8">{subProduct}</h3>
       {products ? (
         <ProductList products={products || []} styleMode="page" />

@@ -6,9 +6,9 @@ export default function ProductLayout({
   model: React.ReactNode;
 }) {
   return (
-    <div>
+    <>
       {children}
       {model}
-    </div>
+    </>
   );
 }

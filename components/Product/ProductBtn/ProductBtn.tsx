@@ -1,13 +1,16 @@
 "use client";
 
-import QuantityTypeComponent from "./QuantityTypeComponent";
-import AmountChange from "./AmountChange";
 import { iconService } from "@/components/Icons/Icons";
 import { useProductBtn } from "@/hooks/useProductBtn";
 
+import QuantityTypeComponent from "./QuantityTypeComponent";
+import AmountChange from "./AmountChange";
+import PriceCmp from "./PriceCmp";
+import Button from "@/components/General/Button";
+
 interface Props {
   productSmall: IProductSmall;
-  styleMode: "page" | "cart";
+  styleMode: TStyleMode;
 }
 
 export default function ProductBtn({ productSmall, styleMode }: Props) {
@@ -18,13 +21,12 @@ export default function ProductBtn({ productSmall, styleMode }: Props) {
     productId,
   } = useProductBtn(productSmall);
 
-  const style =
-    styleMode === "page" ? PRODUCT_BTN_PAGE_STYLE : PRODUCT_BTN_CART_STYLE;
+  const style = styleMode === "card" ? STYLE_CARD : STYLE_CART;
 
   return (
-    <div className={style.container}>
+    <div className={style}>
       <QuantityTypeComponent
-        style={style.radioBtns}
+        styleMode={styleMode}
         quantityTypes={productSmall.pricingDetails}
         pricingDetails={pricingDetails}
         productId={productId}
@@ -32,90 +34,46 @@ export default function ProductBtn({ productSmall, styleMode }: Props) {
       />
 
       <PriceCmp
-        price={(pricingDetails?.weightPerType || 1) * productSmall.pricePerKilo}
-        discount={pricingDetails?.discount}
-        style={style.price}
+        pricePerKilo={productSmall.pricePerKilo}
+        pricingDetails={pricingDetails}
+        styleMode="card"
       />
 
       <AmountChange
-        style={style.btns}
+        styleMode={styleMode}
         amount={pricingDetails.quantity}
         handleAmountChange={handleAmountChange}
       />
 
       {styleMode === "cart" && (
-        <DeleteItemBtn
-          handleAmountChange={handleAmountChange}
-          style={style.deleteBtn}
-        />
+        <DeleteItemBtn handleAmountChange={handleAmountChange} />
       )}
     </div>
   );
 }
 
-function PriceCmp({
-  price,
-  style,
-  discount,
-}: {
-  price: number;
-  style: string;
-  discount?: number;
-}) {
-  return <h3 className={style}>${price * (discount ? discount : 1)}</h3>;
-}
 function DeleteItemBtn({
   handleAmountChange,
-  style,
 }: {
   handleAmountChange: (amount: number) => void;
-  style: string;
 }) {
   return (
-    <button
+    <Button
       onClick={(ev) => {
         ev.stopPropagation();
         ev.preventDefault();
         handleAmountChange(0);
       }}
-      className={style}
+      styleMode="secondary"
+      styleSize="small"
+      className="w-4 h-4 fill-dark-text dark:fill-light-text"
     >
       {iconService.DeleteSvg()}
-    </button>
+    </Button>
   );
 }
 
-// Module imports cause Tailwind to ignore classes because Tailwind CSS scans the source files for class names during the build process.
-// If the class names are dynamically generated or imported from another module, Tailwind cannot detect and include them in the final CSS.
+const STYLE_CARD =
+  "grid bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text justify-items-center pb-1 h-full";
 
-const PRODUCT_BTN_PAGE_STYLE = {
-  container:
-    "grid gap-4 bg-light-bg dark:bg-dark-bg text-dark-text dark:text-light-text justify-items-center",
-  radioBtns: {
-    container: "flex gap-2 border rounded-3xl bg-inherit p-1",
-    label:
-      "peer rounded-3xl cursor-pointer py-1 px-2 text-sm font-semibold font-text w-full",
-  },
-  price: "text-center text-lg font-title",
-  btns: {
-    container: "flex items-center justify-center gap-4 text-center font-text",
-    span: "text-lg",
-  },
-  deleteBtn: "w-4 h-4 fill-dark-text dark:fill-light-text",
-};
-const PRODUCT_BTN_CART_STYLE = {
-  container: "flex gap-4 ",
-  radioBtns: {
-    container: "flex gap-2 border rounded-3xl bg-inherit p-1",
-    label:
-      "peer rounded-3xl cursor-pointer py-1 px-1 text-sm font-semibold font-text",
-  },
-  price: "hidden",
-  btns: {
-    container:
-      "flex items-center justify-center gap-4 text-center font-text h-4 w-12",
-    span: "",
-    svgSize: 4,
-  },
-  deleteBtn: "w-4 h-4 fill-dark-text dark:fill-light-text",
-};
+const STYLE_CART = "flex gap-4 ";

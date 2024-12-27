@@ -16,7 +16,7 @@ export default function SubProductList({
   subProductType,
 }: Props) {
   return (
-    <ul className="w-full gap-8 flex flex-col">
+    <ul className=" gap-32 flex flex-col w-full ">
       {subProductList.map((subProduct) => (
         <Fragment key={subProduct}>
           {subProductType !== subProduct ? (

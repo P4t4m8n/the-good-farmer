@@ -167,6 +167,32 @@
     ]
   },
   {
+    "name": "Cherry tomato",
+    "imgUrl": "https://res.cloudinary.com/dyzqa6uuu/image/upload/v1735308459/307_nanhh2.webp",
+    "productFamily": "Solanaceae",
+    "season": "summer",
+    "productType": "vegetable",
+    "subProductType": "tomatoes and peppers",
+    "description": "A cherry tomato is a small, sweet, and tangy tomato, often used in salads, snacks, and cooking. It’s easy to grow and comes in various colors like red, yellow, and orange.",
+    "pricePerKilo": 25.9,
+    "rating": 4,
+    "isAvailableForSale": true,
+    "pricingDetails": [
+      {
+        "type": "pack",
+        "weightPerType": 1.6,
+        "stock": 183,
+        "discount": 0.1
+      },
+      {
+        "type": "kg",
+        "weightPerType": 1,
+        "stock": 296,
+        "discount": 0.1
+      }
+    ]
+  },
+  {
     "name": "Tomato",
     "imgUrl": "https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&h=350",
     "productFamily": "Solanaceae",
@@ -583,6 +609,58 @@
     ]
   },
   {
+    "name": "Red Pepper",
+    "imgUrl": "https://res.cloudinary.com/dyzqa6uuu/image/upload/v1735308538/%D7%A4%D7%9C%D7%A4%D7%9C_%D7%90%D7%93%D7%95%D7%9D_spnzp6.jpg",
+    "productFamily": "Solanaceae",
+    "season": "summer",
+    "productType": "vegetable",
+    "subProductType": "tomatoes and peppers",
+    "description": "A Red pepper is a crisp, sweet vegetable often used in salads, stir-fries, and stuffing. It’s rich in nutrients and commonly harvested before ripening.",
+    "pricePerKilo": 6,
+    "rating": 3,
+    "isAvailableForSale": true,
+    "pricingDetails": [
+      {
+        "type": "unit",
+        "weightPerType": 0.6,
+        "stock": 846,
+        "discount": 0
+      },
+      {
+        "type": "kg",
+        "weightPerType": 1,
+        "stock": 114,
+        "discount": 0
+      }
+    ]
+  },
+  {
+    "name": "Green Pepper",
+    "imgUrl": "https://res.cloudinary.com/dyzqa6uuu/image/upload/v1735308336/%D7%A4%D7%9C%D7%A4%D7%9C_%D7%99%D7%A8%D7%95%D7%A7_fbm0a7.jpg",
+    "productFamily": "Solanaceae",
+    "season": "summer",
+    "productType": "vegetable",
+    "subProductType": "tomatoes and peppers",
+    "description": "A green pepper is a crisp, mild vegetable often used in salads, stir-fries, and stuffing. It’s rich in nutrients and commonly harvested before ripening.",
+    "pricePerKilo": 4,
+    "rating": 3,
+    "isAvailableForSale": true,
+    "pricingDetails": [
+      {
+        "type": "unit",
+        "weightPerType": 0.6,
+        "stock": 846,
+        "discount": 0
+      },
+      {
+        "type": "kg",
+        "weightPerType": 1,
+        "stock": 114,
+        "discount": 0
+      }
+    ]
+  },
+  {
     "name": "Bell Pepper",
     "imgUrl": "https://images.pexels.com/photos/1434254/pexels-photo-1434254.jpeg?auto=compress&cs=tinysrgb&h=350",
     "productFamily": "Solanaceae",
@@ -812,6 +890,32 @@
         "type": "kg",
         "weightPerType": 1,
         "stock": 786,
+        "discount": 0
+      }
+    ]
+  },
+  {
+    "name": "Jalapeno Pepper",
+    "imgUrl": "jalapeno ",
+    "productFamily": "Solanaceae",
+    "season": "summer",
+    "productType": "vegetable",
+    "subProductType": "tomatoes and peppers",
+    "description": "A spicy vegetable used in various cuisines around the world to add heat and flavor to dishes.",
+    "pricePerKilo": 20,
+    "rating": 3,
+    "isAvailableForSale": true,
+    "pricingDetails": [
+      {
+        "type": "pack",
+        "weightPerType": 4.4,
+        "stock": 946,
+        "discount": 0
+      },
+      {
+        "type": "kg",
+        "weightPerType": 1,
+        "stock": 388,
         "discount": 0
       }
     ]

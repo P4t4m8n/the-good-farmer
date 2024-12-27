@@ -19,7 +19,7 @@ export default async function ProductPage({
     productType,
     subProductType,
     skip: 0,
-    limit: 1000,
+    limit: 10,
     isSmallProduct: true,
   })) as IProductSmall[];
 

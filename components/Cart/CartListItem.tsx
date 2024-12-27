@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProductBtn from "../Product/ProductBtn/ProductBtn";
+import PriceCmp from "../Product/ProductBtn/PriceCmp";
 
 interface Props {
   cartItem: ICartItem;
@@ -21,7 +22,7 @@ export default function CartListItem({ cartItem }: Props) {
         <h4 className="font-title">{cartItem.product.name}</h4>
         <ProductBtn productSmall={cartItem?.product} styleMode="cart" />
       </div>
-      <p>{cartItem.totalPrice.toFixed(2)}</p>
+      <PriceCmp price={cartItem.totalPrice} styleMode="cart" />
     </li>
   );
 }
