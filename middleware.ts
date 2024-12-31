@@ -14,10 +14,8 @@ export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.includes("/admin")) {
     const decode = await authServerService.decodeToken(value);
     if (!decode.isAdmin) {
-      console.log("decode:", decode);
       return NextResponse.redirect(new URL("/signin", request.nextUrl));
     }
-    console.log("decode:", decode);
   }
   //   response.headers.set("content-type", "text/html");
   //   response.cookies.set("theme", prefersDark ? "dark" : "light");

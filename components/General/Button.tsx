@@ -46,7 +46,6 @@ export default function Button({
   className,
   ...props
 }: Props) {
-  console.log("className:", className)
   const style = className
     ? className
     : ` ${STYLES[styleMode]} ${SIZES[styleSize]} font-title

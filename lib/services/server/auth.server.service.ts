@@ -32,10 +32,8 @@ const getEmpty = (): IUser => {
 };
 
 const decodeToken = async (token: string) => {
-  console.log("process.env.JWT_SECRET:", process.env.JWT_SECRET);
   const secret = new TextEncoder().encode(process.env.JWT_SECRET);
   const { payload } = await jwtVerify(token, secret);
-  console.log("payload:", payload);
 
   return payload;
 };
