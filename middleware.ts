@@ -4,6 +4,7 @@ import { authServerService } from "./lib/services/server/auth.server.service";
 
 export async function middleware(request: NextRequest) {
   // const prefersDark =
+
   // request.headers.get("sec-ch-prefers-color-scheme") === "dark";
   const session = request.cookies.get("session");
   const value = session?.value;

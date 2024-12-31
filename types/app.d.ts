@@ -5,6 +5,7 @@ declare interface IEntity {
 declare interface IMenuItem extends IMenuBtn {
   onClick?: () => void;
   link?: string;
+  type: "link" | "btn" | "authLink" | "authBtn" | "adminLink" | "adminBtn";
 }
 
 declare interface IMenuBtn {

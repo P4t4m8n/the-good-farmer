@@ -19,23 +19,26 @@ export default function UserMenu() {
       {
         text: "PROFILE",
         style:
-          "flex justify-between items-center border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
+          "flex justify-between items-center w-full border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
         link: "/profile",
-        iconSvg:  iconService.AvatarSvg(),
+        iconSvg: iconService.AvatarSvg(),
+        type: "link",
       },
       {
         text: "ADMIN",
         style:
-          "flex justify-between items-center border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
+          "flex justify-between items-center w-full border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
         link: "/admin",
-        iconSvg: iconService.LogoutSvg(),
+        iconSvg: iconService.AdminSvg(),
+        type: "adminLink",
       },
       {
         text: "LOGOUT",
         style:
-          " flex justify-between items-center  pt-1 hover:text-dark-blue hover:font-semibold transition-all duration-300 w-full",
+          "flex justify-between items-center w-full  pt-1 hover:text-dark-blue hover:font-semibold transition-all duration-300 w-full",
         onClick: logout,
         iconSvg: iconService.LogoutSvg(),
+        type: "btn",
       },
     ];
 
@@ -43,7 +46,7 @@ export default function UserMenu() {
       menuBtn,
       items,
       menuStyle:
-        "shadow-md flex-col p-4 rounded-md w-full absolute top-14 shadow-[0_0_0_1px_rgba(0,0,0,.1)] dark:shadow-light-text",
+        "shadow-md flex-col p-4 rounded-md w-full bg-dark-bg absolute  top-14 shadow-[0_0_0_1px_rgba(0,0,0,.1)] dark:shadow-light-text",
     };
   };
 

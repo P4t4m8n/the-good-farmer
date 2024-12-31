@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import {
@@ -10,7 +9,6 @@ import {
   FC,
 } from "react";
 
-import { useRouter } from "next/navigation";
 import { authClientService } from "@/lib/services/client/auth.client.service";
 
 interface Props {
@@ -18,8 +16,6 @@ interface Props {
 }
 interface AuthProvider {
   user: IUser | null;
-  login: (formData: FormData) => Promise<void>;
-  signUp: (formData: FormData) => Promise<void>;
   logout: () => Promise<void>;
   getCurrentUserNoRender: () => IUser | null;
   setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
@@ -33,7 +29,6 @@ export const AuthProvider: FC<Props> = ({
   children: ReactNode;
 }) => {
   const [user, setUser] = useState<IUser | null>(null);
-  const router = useRouter();
 
   //Access the state value without causing a re-render
   const userRef = useRef<IUser | null>(null);
@@ -52,37 +47,6 @@ export const AuthProvider: FC<Props> = ({
     fetchUser();
   }, []);
 
-  const login = async (_: FormData) => {
-    try {
-      //   const user = await authClientService.login(formData);
-      //   if (!user) {
-      //     throw new Error("No user returned from login");
-      //   }
-      //   userRef.current = user;
-      //   setUser(user);
-
-      redirectClient();
-    } catch (error) {
-      console.error("Error logging in:", error);
-      setUser(null);
-    }
-  };
-
-  const signUp = async (_: FormData) => {
-    try {
-      //   const user = await authClientService.signUp(formData);
-      //   if (!user) {
-      //     throw new Error("No user returned from sign-up");
-      //   }
-      //   userRef.current = user;
-      //   setUser(user);
-      redirectClient();
-    } catch (error) {
-      console.error("Error signing up:", error);
-      setUser(null);
-    }
-  };
-
   const logout = async () => {
     try {
       await authClientService.logout();
@@ -96,17 +60,9 @@ export const AuthProvider: FC<Props> = ({
 
   const getCurrentUserNoRender = () => userRef.current;
 
-  const redirectClient = () => {
-    if (window.history.length > 1) {
-      router.back();
-    } else {
-      router.push("/");
-    }
-  };
-
   return (
     <authContext.Provider
-      value={{ user, login, signUp, logout, getCurrentUserNoRender, setUser }}
+      value={{ user, logout, getCurrentUserNoRender, setUser }}
     >
       {children}
     </authContext.Provider>

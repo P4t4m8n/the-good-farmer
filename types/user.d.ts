@@ -5,6 +5,7 @@ declare interface IUser extends IEntity {
   imgUrl?: string;
   phone?: string;
   password?: string;
+  isAdmin?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
 }
@@ -16,4 +17,5 @@ declare interface IUserDtoCreate {
   password?: string;
   imgUrl?: string;
   googleId?: string;
+  isAdmin?: boolean;
 }
