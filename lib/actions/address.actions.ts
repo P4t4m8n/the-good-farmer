@@ -8,6 +8,7 @@ import {
 } from "../db/models/address.model";
 import { AppError } from "../services/utils/AppError.server";
 import { addressServerService } from "../services/server/address.server.service";
+import xss from "xss";
 
 export const getAddresses = async (
   filter: IAddressFIlter
@@ -16,31 +17,7 @@ export const getAddresses = async (
     const addressCollection =
       await DatabaseService.getCollection<IAddressDocument>("addresses");
 
-    const pipeline: Record<string, unknown>[] = [];
-
-    const matchStage: Record<string, unknown> = {};
-
-    if (filter.city) {
-      matchStage.city = { $regex: filter.city, $options: "i" };
-    }
-
-    if (filter.userId) {
-      matchStage.userId = new ObjectId(filter.userId);
-    }
-
-    pipeline.push({ $match: matchStage });
-
-    pipeline.push({
-      $project: {
-        _id: { $toString: "$_id" },
-        street: 1,
-        city: 1,
-        state: 1,
-        zipCode: 1,
-        country: 1,
-        userId: { $toString: "$userId" },
-      },
-    });
+    const { pipeline } = buildPipeline(filter);
 
     const addresses = await addressCollection
       .aggregate<IAddress>(pipeline)
@@ -85,4 +62,43 @@ export const saveAddress = async (
   } catch (error) {
     throw AppError.create(`Error saving address ${error}`, 500, true);
   }
+};
+
+const buildMatchStage = (filter: IAddressFIlter) => {
+  const userId = xss(filter?.userId || "").toString();
+  const city = xss(filter?.city || "").toString();
+
+  const _id = xss(filter?._id || "").toString();
+
+  return {
+    ...(userId && { userId: new ObjectId(userId) }),
+    ...(_id && { _id: new ObjectId(_id) }),
+    ...(city && { city: { $regex: city, $options: "i" } }),
+  };
+};
+
+const buildPipeline = (filter: IAddressFIlter): { pipeline: object[] } => {
+  const DEFAULT_LIMIT = 100;
+
+  const pipeline: object[] = [];
+  const skip = Number.isInteger(filter?.skip) ? filter.skip : 0;
+  const limit = Number.isInteger(filter?.limit) ? filter.limit : DEFAULT_LIMIT;
+
+  pipeline.push({ $match: buildMatchStage(filter) });
+
+  if (skip && skip > 0) pipeline.push({ $skip: skip });
+  if (limit && limit > 0) pipeline.push({ $limit: limit });
+
+  pipeline.push({
+    $project: {
+      _id: { $toString: "$_id" },
+      city: 1,
+      state: 1,
+      zipCode: 1,
+      country: 1,
+      userId: { $toString: "$userId" },
+    },
+  });
+
+  return { pipeline };
 };

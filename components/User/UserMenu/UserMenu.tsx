@@ -22,7 +22,7 @@ export default function UserMenu() {
         text: "PROFILE",
         style:
           "flex justify-between items-center w-full border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
-        link: "/profile",
+        link: `/profile/${user?._id}`,
         iconSvg: iconService.AvatarSvg(),
         type: "link",
       },

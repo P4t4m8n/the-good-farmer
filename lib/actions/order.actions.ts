@@ -6,6 +6,7 @@ import { IOrderDocument } from "../db/models/order.model";
 import { ObjectId } from "mongodb";
 import { orderServerService } from "../services/server/order.server.service";
 import { AppError } from "../services/utils/AppError.server";
+import xss from "xss";
 
 export const saveOrder = async (state: IOrder, formData: FormData) => {
   let url = "/checkout/payment/";
@@ -37,41 +38,7 @@ export const getOrderById = async (
       "orders"
     );
 
-    const pipeline: Record<string, unknown>[] = [
-      { $match: { _id: new ObjectId(orderId) } },
-    ];
-
-    pipeline.push({
-      $lookup: {
-        from: "addresses",
-        localField: "addressId",
-        foreignField: "_id",
-        as: "address",
-      },
-    });
-
-    pipeline.push({
-      $unwind: {
-        path: "$address",
-        preserveNullAndEmptyArrays: true,
-      },
-    });
-
-    pipeline.push({
-      $project: {
-        _id: { $toString: "$_id" },
-        productsPrice: 1,
-        deliveryPrice: 1,
-        deliveryDate: 1,
-        payment: 1,
-        status: 1,
-        userDetails: 1,
-        address: {
-          city: 1,
-          street: 1,
-        },
-      },
-    });
+    const { pipeline } = buildPipeline({ _id: orderId });
 
     const order = await orderCollection
       .aggregate<Partial<IOrder>>(pipeline)
@@ -84,6 +51,26 @@ export const getOrderById = async (
     return order;
   } catch (error) {
     throw AppError.create(`Error getting order by id ${error}`, 500, true);
+  }
+};
+
+export const getOrders = async (filter: IOrderFilter): Promise<IOrder[]> => {
+  try {
+    const orderCollection = await DatabaseService.getCollection<IOrderDocument>(
+      "orders"
+    );
+
+    const { pipeline } = buildPipeline(filter);
+
+    const orders = await orderCollection.aggregate<IOrder>(pipeline).toArray();
+
+    if (!orders.length) {
+      console.warn("No orders found.");
+      return [];
+    }
+    return orders;
+  } catch (error) {
+    throw AppError.create(`Error getting orders ${error}`, 500, true);
   }
 };
 
@@ -116,4 +103,87 @@ export const chargeCreditCard = async (_: unknown, formData: FormData) => {
   }
 
   redirect(url);
+};
+
+const buildMatchStage = (filter: IOrderFilter) => {
+  const userId = xss(filter?.userId || "").toString();
+  const status = xss(filter?.status || "") as TOrderStatus;
+  const fromDate = xss(filter?.fromDate || "").toString();
+  const toDate = xss(filter?.toDate || "").toString();
+  const _id = xss(filter?._id || "").toString();
+
+  return {
+    ...(status && { status }),
+    ...(userId && { userId: new ObjectId(userId) }),
+    ...(fromDate && { createdAt: { $gte: new Date(fromDate) } }),
+    ...(toDate && { createdAt: { $lte: new Date(toDate) } }),
+    ...(_id && { _id: new ObjectId(_id) }),
+  };
+};
+
+const buildPipeline = (filter: IOrderFilter): { pipeline: object[] } => {
+  const DEFAULT_LIMIT = 100;
+
+  const pipeline: object[] = [];
+  const skip = Number.isInteger(filter?.skip) ? filter.skip : 0;
+  const limit = Number.isInteger(filter?.limit) ? filter.limit : DEFAULT_LIMIT;
+
+  pipeline.push({ $match: buildMatchStage(filter) });
+
+  if (skip && skip > 0) pipeline.push({ $skip: skip });
+  if (limit && limit > 0) pipeline.push({ $limit: limit });
+
+  pipeline.push({
+    $lookup: {
+      from: "users",
+      localField: "userId",
+      foreignField: "_id",
+      as: "user",
+    },
+  });
+
+  pipeline.push({
+    $unwind: {
+      path: "$users",
+      preserveNullAndEmptyArrays: true,
+    },
+  });
+  pipeline.push({
+    $lookup: {
+      from: "addresses",
+      localField: "addressId",
+      foreignField: "_id",
+      as: "address",
+    },
+  });
+
+  pipeline.push({
+    $unwind: {
+      path: "$address",
+      preserveNullAndEmptyArrays: true,
+    },
+  });
+
+  pipeline.push({
+    $lookup: {
+      from: "products",
+      localField: "products.productId",
+      foreignField: "_id",
+      as: "products",
+    },
+  });
+
+  pipeline.push({
+    $project: {
+      _id: { $toString: "$_id" },
+      productsPrice: 1,
+      deliveryPrice: 1,
+      deliveryDate: 1,
+      isDelivered: 1,
+      amountOfProducts: { $sum: "$products" },
+      status: 1,
+    },
+  });
+
+  return { pipeline };
 };

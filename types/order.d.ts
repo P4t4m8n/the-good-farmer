@@ -16,6 +16,7 @@ declare interface IOrder extends IEntity {
   createdAt?: Date;
   updatedAt?: Date;
   payment: IOrderPayment;
+  amountOfProducts?: number;
   receiptNumber: string | null;
   userDetails: IUserDetails; //for who is the order. can be the user and the user can order for someone else
 }
@@ -28,7 +29,14 @@ declare interface IUserDetails {
 }
 
 declare interface IOrderFilter {
+  _id?: string;
   status?: TOrderStatus;
+  userId?: string;
+  fromDate?: string;
+  toDate?: string;
+  address?: IAddressBase;
+  skip?: number;
+  limit?: number;
 }
 
 declare type TDelivery = {

@@ -23,4 +23,7 @@ declare interface IAddress extends IEntity, IAddressBase {
 declare interface IAddressFIlter {
   city?: string;
   userId?: string;
+  _id?: string;
+  skip?: number;
+  limit?: number;
 }
