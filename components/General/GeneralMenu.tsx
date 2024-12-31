@@ -15,12 +15,12 @@ export default function GeneralMenu({ menuItems }: Props) {
   const modelRef = useRef(null);
   const [isOpen, setIsOpen] = useModel(modelRef);
 
-  const { iconSvg, imgUrl, text, style } = menuItems.menuBtn;
+  const { style } = menuItems.menuBtn;
   return (
     <div className="relative" ref={modelRef}>
       <Button
-        styleMode="tertiary"
-        styleSize="medium"
+        styleMode="none"
+        styleSize="none"
         className={style}
         onClick={(e) => {
           e.preventDefault();
@@ -28,16 +28,7 @@ export default function GeneralMenu({ menuItems }: Props) {
           setIsOpen(true);
         }}
       >
-        {iconSvg && iconSvg}
-        {imgUrl && (
-          <Image
-            src={imgUrl}
-            width={32}
-            height={32}
-            alt={text || "menu button"}
-          />
-        )}
-        <span>{text && text.charAt(0).toUpperCase() + text.slice(1)}</span>
+        <ItemContent {...menuItems.menuBtn} type="btn" />
       </Button>
       <ul className={`${isOpen ? "flex" : "hidden"} ${menuItems.menuStyle} `}>
         {menuItems.items.map((item, idx) => (
@@ -69,16 +60,7 @@ function dynamicMenuItem({
             className={props.style}
             onClick={() => setIsOpen(false)}
           >
-            <span>{props.text}</span>
-            {props.iconSvg && props.iconSvg}
-            {props.imgUrl && (
-              <Image
-                src={props.imgUrl}
-                width={32}
-                height={32}
-                alt={props.text || "menu link"}
-              />
-            )}
+            <ItemContent {...props} />
           </Button>
         </Link>
       );
@@ -90,38 +72,20 @@ function dynamicMenuItem({
           className={props.style}
           onClick={(e) => handleClick(e, props.onClick!)}
         >
-          <span>{props.text}</span>
-          {props.iconSvg && props.iconSvg}
-          {props.imgUrl && (
-            <Image
-              src={props.imgUrl}
-              width={32}
-              height={32}
-              alt={props.text || "menu function"}
-            />
-          )}
+          <ItemContent {...props} />
         </Button>
       );
     case "adminLink":
       return (
         <AdminWrapper>
-          <Link href={props?.link || ""} className="w-full">
+          <Link href={props?.link || ""} className="">
             <Button
               styleMode="none"
               styleSize="none"
               className={props.style}
               onClick={() => setIsOpen(false)}
             >
-              <span>{props.text}</span>
-              {props.iconSvg && props.iconSvg}
-              {props.imgUrl && (
-                <Image
-                  src={props.imgUrl}
-                  width={32}
-                  height={32}
-                  alt={props.text || "menu link"}
-                />
-              )}
+              <ItemContent {...props} />
             </Button>
           </Link>
         </AdminWrapper>
@@ -135,20 +99,28 @@ function dynamicMenuItem({
             className={props.style}
             onClick={(e) => handleClick(e, props.onClick!)}
           >
-            <span>{props.text}</span>
-            {props.iconSvg && props.iconSvg}
-            {props.imgUrl && (
-              <Image
-                src={props.imgUrl}
-                width={32}
-                height={32}
-                alt={props.text || "menu function"}
-              />
-            )}
+            <ItemContent {...props} />
           </Button>
         </AdminWrapper>
       );
     default:
       return null;
   }
+}
+
+function ItemContent({ ...props }: IMenuItem) {
+  return (
+    <>
+      <span>{props.text}</span>
+      {props.iconSvg && props.iconSvg}
+      {props.imgUrl && (
+        <Image
+          src={props.imgUrl}
+          width={32}
+          height={32}
+          alt={props.text || "menu link"}
+        />
+      )}
+    </>
+  );
 }

@@ -11,8 +11,10 @@ export default function UserMenu() {
     "bg-light-btn dark:bg-dark-bg text-light-text dark:text-dark-text w-36 min-w-36 max-w-36 h-12 shadow-[0_0_0_1px_rgba(0,0,0,.7)] dark:shadow-light-text rounded-lg px-4 font-bold flex justify-center gap-4 items-center text-base truncate ";
   const getUserMenuItems = (): IMenu => {
     const menuBtn: IMenuBtn = {
-      text: user?.firstName,
-      style: btnStyle + " flex-row-reverse",
+      text:
+        (user?.firstName || "").charAt(0).toUpperCase() +
+        user?.firstName.slice(1),
+      style: btnStyle,
     };
 
     const items: IMenuItem[] = [
@@ -27,7 +29,7 @@ export default function UserMenu() {
       {
         text: "ADMIN",
         style:
-          "flex justify-between items-center w-full border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
+          "flex  justify-between items-center w-full border-b py-1 hover:text-dark-blue hover:font-semibold transition-all duration-300",
         link: "/admin",
         iconSvg: iconService.AdminSvg(),
         type: "adminLink",
