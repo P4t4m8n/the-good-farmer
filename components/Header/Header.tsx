@@ -2,7 +2,6 @@
 
 import Logo from "./Logo";
 import AppNav from "./AppNav";
-import Cart from "../Cart/Cart";
 import UserMenu from "../User/UserMenu/UserMenu";
 
 export default function Header() {
@@ -12,8 +11,6 @@ export default function Header() {
         <Logo />
         <AppNav />
         <UserMenu />
-
-        <Cart />
       </header>
     </>
   );

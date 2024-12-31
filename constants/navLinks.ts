@@ -29,11 +29,6 @@ export const APP_NAV_LINKS: {
     icon: "recipes",
   },
   {
-    text: "Blog",
-    href: "/blog",
-    icon: "blog",
-  },
-  {
     text: "About Us",
     href: "/about",
     icon: "about",

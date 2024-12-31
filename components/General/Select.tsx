@@ -1,13 +1,12 @@
-interface Props {
-  selectProps: React.SelectHTMLAttributes<HTMLSelectElement>;
+interface Props extends React.HTMLProps<HTMLSelectElement> {
   options: string[];
   children?: React.ReactNode;
 }
-export default function Select({ selectProps, options, children }: Props) {
+export default function Select({ options, children, ...props }: Props) {
   return (
     <div>
       {children}
-      <select {...selectProps}>
+      <select {...props}>
         {options.map((option) => (
           <option key={option} value={option}>
             {option.charAt(0).toUpperCase() + option.slice(1)}

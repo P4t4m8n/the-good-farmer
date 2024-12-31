@@ -39,9 +39,9 @@ export default function EditAddress({ setAddresses, address }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
-  const items: TInput[] = [
+  const ADDRESS_INPUTS = [
     {
-      name: "streetName",
+      name: "name",
       type: "text",
       required: true,
       placeholder: "Street Name",
@@ -50,7 +50,7 @@ export default function EditAddress({ setAddresses, address }: Props) {
         "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full",
     },
     {
-      name: "streetNumber",
+      name: "number",
       type: "text",
       placeholder: "Street Number",
       defaultValue: state?.street.number,
@@ -132,8 +132,8 @@ export default function EditAddress({ setAddresses, address }: Props) {
     <div>
       <Button
         onClick={() => setIsOpen(true)}
-        style="primary"
-        size="small"
+        styleMode="primary"
+        styleSize="small"
         className=" flex gap-1 items-center  h-fit"
       >
         {iconService.PlusSvg(6)}
@@ -146,14 +146,14 @@ export default function EditAddress({ setAddresses, address }: Props) {
             action={formAction}
             className="open-model fixed z-50 top-1/2 bg-light-btn dark:bg-dark-btn left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 w-96 aspect-square  grid gap-2 shadow-model rounded"
           >
-            {items.map((input) => (
-              <Input key={input.name} inputProps={input} />
+            {ADDRESS_INPUTS.map((input) => (
+              <Input key={input.name} {...input} />
             ))}
             <Button
               disabled={isPending}
               type="submit"
-              style="primary"
-              size="large"
+              styleMode="primary"
+              styleSize="large"
               className="bg-dark-btn font-bold justify-self-center dark:bg-light-btn text-light-text dark:text-dark-text w-fit p-2"
             >
               Save

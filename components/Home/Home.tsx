@@ -3,7 +3,7 @@ import Parallax from "../Parallax/Parallax";
 
 export default function Home() {
   return (
-    <main className="">
+    <div>
       <Parallax>
         <div className="relative  flex flex-col  items-center justify-center h-full text-center">
           <h1 className="text-5xl font-title font-bold text-amber-50">
@@ -22,6 +22,6 @@ export default function Home() {
           </button>
         </div>
       </Parallax>
-    </main>
+    </div>
   );
 }

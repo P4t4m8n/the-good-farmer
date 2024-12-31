@@ -18,10 +18,9 @@ export default function ProductEdit({ product }: Props) {
     product
   );
 
-
   const {
     name = "",
-    imgUrl = "/placeholder.png",
+    imgUrl = "/imgs/defaultImg.png",
     description = "",
     productType,
     productFamily,
@@ -36,50 +35,40 @@ export default function ProductEdit({ product }: Props) {
     <form action={action} className="h-full w-full flex flex-col gap-4 mr-8">
       <header>
         <Input
-          inputProps={{
-            id: "name",
-            name: "name",
-            type: "text",
-            defaultValue: name,
-            className:
-              "underline text-2xl font-semibold font-title text-dark-text",
-          }}
+          id="name"
+          name="name"
+          type="text"
+          defaultValue={name}
+          className="underline text-2xl font-semibold font-title text-dark-text"
         >
           Name:
         </Input>
-        <Input inputProps={{ type: "hidden", name: "_id", value: _id }} />
+        <Input type="hidden" name="_id" value={_id} />
       </header>
 
       <ImageUpload imgUrl={imgUrl} />
       <ProductTypeIndex productType={productType} />
       <Input
-        inputProps={{
-          name: "productFamily",
-          type: "text",
-          className: "bg-dark-btn",
-
-          defaultValue: productFamily,
-        }}
+        name="productFamily"
+        type="text"
+        className="bg-dark-btn"
+        defaultValue={productFamily}
       >
         product family:
       </Input>
       <Select
         options={["spring", "summer", "fall", "winter", "year-round", "none"]}
-        selectProps={{
-          name: "season",
-          defaultValue: season,
-          className: "bg-dark-btn",
-        }}
+        name="season"
+        defaultValue={season}
+        className="bg-dark-btn"
       >
         Season:
       </Select>
 
       <Input
-        inputProps={{
-          type: "checkbox",
-          name: "isAvailableForSale",
-          defaultChecked: isAvailableForSale,
-        }}
+        type="checkbox"
+        name="isAvailableForSale"
+        defaultChecked={isAvailableForSale}
       >
         isAvailableForSale:
       </Input>
@@ -89,7 +78,12 @@ export default function ProductEdit({ product }: Props) {
       />
       <Description description={description} />
       <div className="flex flex-col gap-2"></div>
-      <Button style="primary" size="large" disabled={loading} type="submit">
+      <Button
+        styleMode="primary"
+        styleSize="large"
+        disabled={loading}
+        type="submit"
+      >
         Save
       </Button>
     </form>

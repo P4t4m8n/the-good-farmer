@@ -44,18 +44,16 @@ export default function PricingDetailsIndex({
   return (
     <div className="">
       <Input
-        inputProps={{
-          type: "number",
-          name: "pricePerKilo",
-          defaultValue: pricePerKilo?.toString(),
-          className: "bg-dark-btn",
-        }}
+        type="number"
+        name="pricePerKilo"
+        defaultValue={pricePerKilo?.toString()}
+        className="bg-dark-btn"
       >
         Price per kilo:
       </Input>
       <Button
-        size="medium"
-        style="secondary"
+        styleSize="medium"
+        styleMode="secondary"
         className="bg-green-600"
         onClick={addPricingDetail}
       >

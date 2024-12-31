@@ -24,7 +24,7 @@ export default function PricingIndex({
         onChange={onChange}
       />
 
-      <Button style="secondary" size="medium" onClick={() => OnDelete(idx)}>
+      <Button styleMode="secondary" styleSize="medium" onClick={() => OnDelete(idx)}>
         Delete
       </Button>
     </li>

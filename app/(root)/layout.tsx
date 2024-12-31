@@ -1,3 +1,4 @@
+import Cart from "@/components/Cart/Cart";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 
@@ -9,9 +10,10 @@ export default async function MainLayout({
   return (
     <>
       <Header />
-      <main className="pt-40 w-full gap-16  h-fit px-4 flex flex-col">
+      <main className="pt-40 w-full  h-fit flex flex-col">
+        <Cart/>
         {children}
-      <Footer />
+        <Footer />
       </main>
     </>
   );

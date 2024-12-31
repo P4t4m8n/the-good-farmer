@@ -9,11 +9,9 @@ export default function SubProductType({ productType }: Props) {
   return (
     <Select
       options={subProductTypes}
-      selectProps={{
-        name: "subProductType",
-        className: "bg-dark-btn",
-        defaultValue: productType,
-      }}
+      name="subProductType"
+      className="bg-dark-btn"
+      defaultValue={productType}
     />
   );
 }

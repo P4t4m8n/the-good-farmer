@@ -13,7 +13,6 @@
     --foreground: #ededed;
   }
 }
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -38,7 +37,6 @@ body {
       left: 0;
       width: 0;
       height: 1px;
-      background-color: #e1f8eb;
       transition: width 0.3s ease;
     }
 
@@ -142,6 +140,7 @@ body {
     animation-range: entry 20%;
     transform: translateX(-100vw);
   }
+
   @keyframes slide-in {
     0% {
       opacity: 0;
@@ -160,4 +159,17 @@ body {
   }
 }
 
-.max-admin-links{}
+.cart-after {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 50%;
+    height: 100%;
+    background: inherit;
+    border-top-left-radius: 100vh;
+    border-bottom-left-radius: 100vh;
+  }
+}

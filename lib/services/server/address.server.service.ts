@@ -15,8 +15,8 @@ const formDataToDTO = (
   const zipCode = xss(formData.get("zipCode")?.toString() || "");
   const country = xss(formData.get("country")?.toString() || "");
   const street = {
-    name: xss(formData.get("streetName")?.toString() || ""),
-    number: xss(formData.get("streetNumber")?.toString() || ""),
+    name: xss(formData.get("name")?.toString() || ""),
+    number: xss(formData.get("number")?.toString() || ""),
     floor: xss(formData.get("floor")?.toString() || ""),
     entrance: xss(formData.get("entrance")?.toString() || ""),
     apartment: xss(formData.get("apartment")?.toString() || ""),

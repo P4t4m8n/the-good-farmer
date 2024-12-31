@@ -69,15 +69,13 @@ export default function CheckoutDelivery({
                 {delivery.date}
               </span>
               <Input
-                inputProps={{
-                  type: "radio",
-                  name: "deliveryDate",
-                  id: delivery.date,
-                  value: delivery.date,
-                  onChange: handleChange,
-                  hidden: true,
-                  checked: currentDelivery?.date === delivery.date,
-                }}
+                type="radio"
+                name="deliveryDate"
+                id={delivery.date}
+                value={delivery.date}
+                onChange={handleChange}
+                hidden={true}
+                checked={currentDelivery?.date === delivery.date}
               >
                 <span
                   className={`cursor-pointer border rounded-2xl p-2 ${
@@ -99,8 +97,8 @@ export default function CheckoutDelivery({
         <Button
           disabled={!currentDelivery}
           onClick={(ev) => handleNextClick(ev, "confirm")}
-          style="primary"
-          size="medium"
+          styleMode="primary"
+          styleSize="medium"
           className="border mt-auto"
         >
           To finalized

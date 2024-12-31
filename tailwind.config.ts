@@ -6,16 +6,18 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "selector",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
         "light-bg": "#ededed", // Light mode primary background
-        "light-btn": "#ffffff", // Light mode secondary (buttons)
-        "light-text": "#f5f5f5", // Light mode secondary text color
+        "light-btn": "#171717", // Light mode secondary (buttons)
+        // "light-btn": "#ffffff", // Light mode secondary (buttons)
+        "light-text": "#1f1f1f", // Light mode secondary text color
+        // "light-text": "#f5f5f5", // Light mode secondary text color
         "dark-bg": "#0a0a0a", // Dark mode primary background
-        "dark-btn": "#171717", // Dark mode secondary background and light mode buttons
-        "dark-text": "#1f1f1f", // Dark mode secondary text color
+        "dark-btn": "#ffffff", // Dark mode secondary background and light mode buttons
+        "dark-text": "#f5f5f5", // Dark mode secondary text color
         "discount-red": "#EE111B",
       },
       backgroundImage: {

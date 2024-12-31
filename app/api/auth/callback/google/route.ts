@@ -74,8 +74,8 @@ export async function GET(req: NextRequest) {
         throw error;
       }
     }
-    const url = req.nextUrl.clone();
-    url.pathname = "/";
+
+    const url = new URL("/", req.nextUrl);
     return NextResponse.redirect(url);
   } catch (error) {
     url.pathname = "/error";

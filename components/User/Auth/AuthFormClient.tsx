@@ -23,25 +23,34 @@ export default function AuthFormClient() {
   }, [state]);
   const inputs = isLogin ? LOGIN_INPUTS : SIGN_UP_INPUTS;
   return (
-    <div className="flex flex-col items-center p-4 gap-8 bg-white">
-      <header className="">{isLogin ? "Login" : "Sign-Up"}</header>
+    <div className="flex flex-col items-center p-4 gap-8 ">
+      <header className="">
+        <Button
+          styleMode="tertiary"
+          styleSize="medium"
+          onClick={() => router.back()}
+        >
+          back
+        </Button>
+        <span>{isLogin ? "Login" : "Sign-Up"}</span>
+      </header>
       <form action={formAction}>
         {inputs.map((input) => (
-          <Input key={input.name} inputProps={input} />
+          <Input key={input.name} {...input} />
         ))}
-        <div className="grid">
+        <div className="grid gap-2">
           <div className="grid grid-cols-2 gap-2">
             <Button
-              style="tertiary"
-              size="medium"
+              styleMode="tertiary"
+              styleSize="medium"
               type="reset"
               disabled={isPending}
             >
-              Cancel
+              Clear
             </Button>
             <Button
-              style="primary"
-              size="medium"
+              styleMode="primary"
+              styleSize="medium"
               type="submit"
               disabled={isPending}
             >
@@ -49,8 +58,8 @@ export default function AuthFormClient() {
             </Button>
           </div>
           <Button
-            style="secondary"
-            size="medium"
+            styleMode="secondary"
+            styleSize="medium"
             type="button"
             disabled={isPending}
             onClick={() => setIsLogin((prev) => !prev)}

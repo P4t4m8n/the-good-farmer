@@ -3,9 +3,7 @@ import { PRODUCT_TYPE } from "@/constants/products";
 
 interface Props {
   productType: TProductType | null;
-  setProductTypeState: React.Dispatch<
-    React.SetStateAction<TProductType >
-  >;
+  setProductTypeState: React.Dispatch<React.SetStateAction<TProductType>>;
 }
 export default function ProductType({
   productType,
@@ -19,12 +17,10 @@ export default function ProductType({
   return (
     <Select
       options={productsTypes}
-      selectProps={{
-        className: "bg-dark-btn",
-        name: "productType",
-        defaultValue: productType || "",
-        onChange,
-      }}
+      className="bg-dark-btn"
+      name="productType"
+      defaultValue={productType || ""}
+      onChange={onChange}
     ></Select>
   );
 }

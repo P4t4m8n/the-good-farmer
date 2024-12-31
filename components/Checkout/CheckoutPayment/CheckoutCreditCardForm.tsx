@@ -51,18 +51,15 @@ export default function CheckoutCreditCardForm({ orderId }: Props) {
         {inputFields.map((input) => (
           <Input
             key={input.name}
-            inputProps={{
-              ...input,
-              readOnly: true,
-              className:
-                "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full",
-            }}
+            {...input}
+            readOnly={true}
+            className="bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text w-full"
           ></Input>
         ))}
 
         <Button
-          style="primary"
-          size="medium"
+          styleMode="primary"
+          styleSize="medium"
           type="submit"
           disabled={isPending}
           className=" bg-dark-btn text-light-text dark:bg-light-btn dark:text-dark-text p-2"

@@ -8,14 +8,15 @@ export default function CheckoutsOverlay({
   isHidden,
   handleChangeStage,
 }: Props) {
+  const STYLE = `absolute inset-0 w-full h-full z-10 bg-black pointer-events-auto opacity-40 ${
+    isHidden ? " hidden" : ""
+  } `;
   return (
     <Button
-      style="primary"
-      size="medium"
+      styleMode="primary"
+      styleSize="medium"
       onClick={handleChangeStage}
-      className={` absolute inset-0  w-full h-full z-10  bg-black pointer-events-auto opacity-40 ${
-        isHidden ? " hidden" : ""
-      } `}
+      className={STYLE}
     ></Button>
   );
 }

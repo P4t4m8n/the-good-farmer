@@ -1,8 +1,8 @@
-// import { createCollections } from "@/lib/mongo/schema";
-// import { seed } from "@/lib/mongo/seed";
+// import { seed } from "@/lib/db/seed";
+// import { createCollections } from "@/lib/db/schema";
 
 export default async function Seed() {
-  // await createCollections()
+  // await createCollections();
   // await seed();
   return <div>Seed</div>;
 }

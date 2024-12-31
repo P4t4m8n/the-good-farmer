@@ -14,7 +14,7 @@ export default function CheckoutPersonalDetails({
   phone,
   userId,
 }: Props) {
-  const inputProps: TInput[] = [
+  const INPUTS = [
     {
       type: "text",
       placeholder: "First Name",
@@ -52,22 +52,20 @@ export default function CheckoutPersonalDetails({
       className:
         "bg-inherit rounded border p-2  border-dark-btn text-dark-text dark:border-light-btn dark:text-light-text  w-full",
     },
+    {
+      type: "text",
+      name: "userId",
+      hidden: true,
+      defaultValue: userId,
+      className: "hidden",
+    },
   ];
 
   return (
     <div className=" font-text grid gap-2 grid-cols-2 grid-rows-2  w-full h-24">
-      {inputProps.map((input) => (
-        <Input key={input.name} inputProps={input} />
+      {INPUTS.map((input) => (
+        <Input key={input.name} {...input} />
       ))}
-      <Input
-        inputProps={{
-          type: "text",
-          name: "userId",
-          hidden: true,
-          defaultValue: userId,
-          className: "hidden",
-        }}
-      />
     </div>
   );
 }

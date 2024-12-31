@@ -22,7 +22,11 @@ export default function CartListItem({ cartItem }: Props) {
         <h4 className="font-title">{cartItem.product.name}</h4>
         <ProductBtn productSmall={cartItem?.product} styleMode="cart" />
       </div>
-      <PriceCmp price={cartItem.totalPrice} styleMode="cart" />
+      <PriceCmp
+        pricePerKilo={cartItem.product.pricePerKilo}
+        pricingDetails={cartItem.pricingDetails}
+        styleMode="cart"
+      />
     </li>
   );
 }

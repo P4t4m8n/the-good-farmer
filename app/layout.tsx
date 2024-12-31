@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alegreya, Playfair_Display, Lora } from "next/font/google";
+import { Alegreya, Lora } from "next/font/google";
 
 import "./globals.css";
 import { AppProvider } from "@/providers/AppProvider";
@@ -8,12 +8,6 @@ const alegreya = Alegreya({
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-alegreya",
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair-display",
 });
 
 const lora = Lora({
@@ -35,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${alegreya.variable} ${playfairDisplay.variable} ${lora.variable} relative antialiased  overflow-hidden overflow-y-scroll scrollbar scrollbar-thumb-rounded scrollbar-thumb-gray-500 scrollbar-track-gray-200`}
+        className={`${alegreya.variable} ${lora.variable} relative antialiased bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text  overflow-hidden overflow-y-scroll`}
       >
         <AppProvider>{children}</AppProvider>
       </body>

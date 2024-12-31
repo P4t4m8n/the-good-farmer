@@ -60,7 +60,7 @@ export default function ProductDetailsModel({ product }: Props) {
           <DetailList items={items} />
         </div>
       </div>
-      <ProductBtn productSmall={productSmall} styleMode="page" />
+      <ProductBtn productSmall={productSmall} styleMode="card" />
     </div>
   );
 }

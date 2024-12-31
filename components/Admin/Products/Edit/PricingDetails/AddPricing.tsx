@@ -12,8 +12,8 @@ export default function AddPricing() {
   return (
     <div>
       <Button
-        size="medium"
-        style="secondary"
+        styleSize="medium"
+        styleMode="secondary"
         onClick={() => setIsOpen((perv) => !perv)}
       >
         Add
@@ -21,7 +21,7 @@ export default function AddPricing() {
       {isOpen && (
         <div ref={modelRef}>
           <Select
-            selectProps={{ name: "type" }}
+            name="type"
             options={QUANTITY_TYPE.map((q) => q.toString())}
           ></Select>
         </div>

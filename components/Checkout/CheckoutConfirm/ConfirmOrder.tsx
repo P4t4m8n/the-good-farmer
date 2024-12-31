@@ -15,13 +15,13 @@ interface Props {
   ) => void;
 }
 
-const ConfirmOrder = ({
+export default function ConfirmOrder({
   productsPrice,
   deliveryPrice,
   isSubmitting,
   isConfirm,
   handleNextClick,
-}: Props) => {
+}: Props) {
   return (
     <div className=" relative w-1/3 flex flex-col gap-4">
       <CheckoutsHeader text={"Payment Details"} />
@@ -30,26 +30,22 @@ const ConfirmOrder = ({
         deliveryPrice={deliveryPrice}
       />
       <Input
-        inputProps={{
-          hidden: true,
-          type: "text",
-          name: "productsPrice",
-          defaultValue: productsPrice.toString(),
-        }}
+        hidden={true}
+        type="text"
+        name="productsPrice"
+        defaultValue={productsPrice.toString()}
       />
       <Input
-        inputProps={{
-          hidden: true,
-          type: "text",
-          name: "deliveryPrice",
-          defaultValue: deliveryPrice.toString(),
-        }}
+        hidden={true}
+        type="text"
+        name="deliveryPrice"
+        defaultValue={deliveryPrice.toString()}
       />
       <Button
         className=" bg-dark-btn text-light-text dark:bg-light-btn dark:text-dark-text p-2"
         type="submit"
-        style="primary"
-        size="large"
+        styleMode="primary"
+        styleSize="large"
         disabled={isSubmitting}
       >
         Confirm
@@ -60,6 +56,4 @@ const ConfirmOrder = ({
       />
     </div>
   );
-};
-
-export default ConfirmOrder;
+}

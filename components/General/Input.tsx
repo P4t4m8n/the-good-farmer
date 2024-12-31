@@ -1,10 +1,6 @@
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: string;
   divStyle?: string;
-  labelStyle?: string;
   children?: React.ReactNode;
-  id?: string;
-  htmlFor?: string;
 }
 
 export default function Input({ divStyle, children, ...props }: Props) {

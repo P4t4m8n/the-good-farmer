@@ -20,8 +20,6 @@ export default function CheckoutDetails({
   isDetails,
   handleNextClick,
 }: Props) {
-
-
   return (
     <div className="dark:bg-inherit flex flex-col gap-4 h-full w-1/3 relative ">
       <CheckoutsHeader text="Personal Details" />
@@ -33,8 +31,8 @@ export default function CheckoutDetails({
       {isDetails && (
         <Button
           onClick={(ev) => handleNextClick(ev, "delivery")}
-          style="primary"
-          size="medium"
+          styleMode="primary"
+          styleSize="medium"
           className="border"
         >
           Next

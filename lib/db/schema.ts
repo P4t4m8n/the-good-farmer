@@ -39,12 +39,18 @@ export const createCollections = async () => {
             imgUrl: {
               bsonType: "string",
             },
+            isAdmin: {
+              bsonType: "bool",
+              description: "Admin status",
+            },
           },
           // Either passwordHash or googleId is required allowed both
           anyOf: [{ required: ["passwordHash"] }, { required: ["googleId"] }],
         },
       },
     });
+
+   
 
     // Address Collection
     await db.createCollection<IAddressDocument>("addresses", {
