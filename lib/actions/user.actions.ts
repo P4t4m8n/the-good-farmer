@@ -2,6 +2,7 @@ import { ObjectId } from "mongodb";
 import DatabaseService from "../db/db";
 import { IUserDocument } from "../db/models/user.model";
 import { AppError } from "../services/utils/AppError.server";
+import { IUser } from "@/types/user";
 
 export const getUserById = async (userId: string): Promise<IUser | null> => {
   try {

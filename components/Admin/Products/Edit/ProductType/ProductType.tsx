@@ -1,5 +1,6 @@
 import Select from "@/components/General/Select";
 import { PRODUCT_TYPE } from "@/constants/products";
+import { TProductType } from "@/types/product";
 
 interface Props {
   productType: TProductType | null;

@@ -4,6 +4,8 @@ import { apiClientService } from "@/lib/services/client/api.client.service";
 import { useEffect, useState } from "react";
 import CheckoutsHeader from "../CheckoutShared/CheckoutsHeader";
 import CheckoutsOverlay from "../CheckoutShared/CheckoutsOverlay";
+import { TCheckoutStage } from "@/types/checkout";
+import { TDelivery } from "@/types/order";
 
 interface Props {
   isDelivery: boolean;

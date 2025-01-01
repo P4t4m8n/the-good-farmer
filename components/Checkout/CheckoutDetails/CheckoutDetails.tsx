@@ -3,6 +3,9 @@ import CheckoutAddressDetails from "./Address/CheckoutAddressDetails";
 import CheckoutPersonalDetails from "./Personal/CheckoutPersonalDetails";
 import CheckoutsHeader from "../CheckoutShared/CheckoutsHeader";
 import CheckoutsOverlay from "../CheckoutShared/CheckoutsOverlay";
+import { IAddress } from "@/types/address.types";
+import { TCheckoutStage } from "@/types/checkout";
+import { IOrder } from "@/types/order";
 
 interface Props {
   order: IOrder;

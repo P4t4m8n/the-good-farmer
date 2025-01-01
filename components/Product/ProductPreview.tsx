@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProductBtn from "./ProductBtn/ProductBtn";
+import { IProductSmall, TProductStyleMode } from "@/types/product";
 
 interface Props {
   product: IProductSmall;

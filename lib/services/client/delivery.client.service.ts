@@ -1,5 +1,8 @@
 //******ALSO USE IN THE BACK, DO NOT add sensitive methods *******//
 
+import { IAddress } from "@/types/address.types";
+import { TDelivery } from "@/types/order";
+
 const getDeliveryDates = (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _: Partial<IAddress>

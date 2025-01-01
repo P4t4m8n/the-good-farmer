@@ -1,3 +1,4 @@
+import { IProductSmall, TProductType } from "@/types/product";
 import ProductList from "./ProductList";
 import SideNav from "./SideNav";
 import SubProductList from "./SubProductList";

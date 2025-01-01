@@ -5,6 +5,7 @@ import {
   IAddressDtoUpdate,
 } from "@/lib/db/models/address.model";
 import { addressClientService } from "../client/address.client.service";
+import { IAddress } from "@/types/address.types";
 
 const formDataToDTO = (
   formData: FormData
@@ -14,13 +15,12 @@ const formDataToDTO = (
   const state = xss(formData.get("state")?.toString() || "");
   const zipCode = xss(formData.get("zipCode")?.toString() || "");
   const country = xss(formData.get("country")?.toString() || "");
-  const street = {
-    name: xss(formData.get("name")?.toString() || ""),
-    number: xss(formData.get("number")?.toString() || ""),
-    floor: xss(formData.get("floor")?.toString() || ""),
-    entrance: xss(formData.get("entrance")?.toString() || ""),
-    apartment: xss(formData.get("apartment")?.toString() || ""),
-  };
+  const streetName = xss(formData.get("name")?.toString() || "");
+  const number = xss(formData.get("number")?.toString() || "");
+  const floor = xss(formData.get("floor")?.toString() || "");
+  const entrance = xss(formData.get("entrance")?.toString() || "");
+  const apartment = xss(formData.get("apartment")?.toString() || "");
+
   const userId = new ObjectId(xss(formData.get("userId")?.toString() || ""));
 
   const returnData = {
@@ -28,15 +28,19 @@ const formDataToDTO = (
     state,
     zipCode,
     country,
-    street,
     userId,
+    streetName,
+    number,
+    floor,
+    entrance,
+    apartment,
   };
 
   if (_id) {
     const objectId = new ObjectId(_id);
-    return { ...returnData, _id: objectId } as IAddressDtoUpdate;
+    return { ...returnData, _id: objectId };
   }
-  return returnData as IAddressDtoCreate;
+  return returnData;
 };
 
 const DTOToAddress = (dto: IAddressDtoUpdate): IAddress => {
@@ -46,7 +50,10 @@ const DTOToAddress = (dto: IAddressDtoUpdate): IAddress => {
     state: dto.state,
     zipCode: dto.zipCode,
     country: dto.country,
-    street: dto.street,
+    streetName: dto.streetName,
+    number: dto.number,
+    floor: dto.floor,
+
     userId: dto.userId.toString(),
   };
 };

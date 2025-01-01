@@ -1,3 +1,5 @@
+import { TProductType } from "@/types/product";
+
 export const APP_NAV_LINKS: {
   text: string;
   href: string;

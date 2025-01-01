@@ -1,3 +1,4 @@
+import { ICartItem } from "@/types/cart";
 import Link from "next/link";
 
 interface Props {

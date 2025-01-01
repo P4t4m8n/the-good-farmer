@@ -2,6 +2,7 @@ import { useState } from "react";
 import PricingDetailsList from "./PricingDetailsList";
 import Button from "@/components/General/Button";
 import Input from "@/components/General/Input";
+import { IPricingDetails } from "@/types/product";
 
 interface Props {
   initialPricingDetails?: IPricingDetails[];

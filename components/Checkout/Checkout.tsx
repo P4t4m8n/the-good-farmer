@@ -10,6 +10,8 @@ import { useStage } from "@/hooks/useStage";
 import CheckoutDelivery from "./CheckoutDelivery/CheckoutDelivery";
 import CheckoutDetails from "./CheckoutDetails/CheckoutDetails";
 import ConfirmOrder from "./CheckoutConfirm/ConfirmOrder";
+import { IOrder } from "@/types/order";
+import { IAddress } from "@/types/address.types";
 
 interface Props {
   order: IOrder;

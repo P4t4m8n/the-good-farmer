@@ -1,3 +1,4 @@
+import { IProductSmall } from "@/types/product";
 import AdminProductPreview from "./AdminProductPreview";
 
 interface Props {

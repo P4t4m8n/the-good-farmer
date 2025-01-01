@@ -8,6 +8,7 @@ import Input from "@/components/General/Input";
 import ProductTypeIndex from "./ProductType/ProductTypeIndex";
 import PricingDetailsIndex from "./PricingDetails/PricingDetailsIndex";
 import Select from "@/components/General/Select";
+import { IProduct } from "@/types/product";
 
 interface Props {
   product: IProduct;

@@ -1,5 +1,6 @@
 import Select from "@/components/General/Select";
 import { productClientService } from "@/lib/services/client/product.client.service";
+import { TProductType } from "@/types/product";
 
 interface Props {
   productType: TProductType;

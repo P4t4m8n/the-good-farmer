@@ -1,5 +1,6 @@
 import Button from "@/components/General/Button";
 import { iconService } from "@/components/Icons/Icons";
+import { TStyleMode } from "@/types/app";
 
 interface Props {
   styleMode: TStyleMode;

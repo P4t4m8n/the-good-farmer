@@ -12,7 +12,7 @@ export default function CheckoutCreditCardForm({ orderId }: Props) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, formAction, isPending] = useActionState(chargeCreditCard, null);
 
-  const inputFields: TInput[] = [
+  const inputFields = [
     {
       name: "orderId",
       type: "hidden",

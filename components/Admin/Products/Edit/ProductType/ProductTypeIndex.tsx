@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductType from "./ProductType";
 import SubProductType from "./SubProductType";
+import { TProductType } from "@/types/product";
 interface Props {
   productType: TProductType;
 }

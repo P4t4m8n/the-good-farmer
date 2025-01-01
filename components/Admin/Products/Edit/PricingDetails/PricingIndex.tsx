@@ -1,5 +1,6 @@
 import Button from "@/components/General/Button";
 import EditPricing from "./EditPricing";
+import { IPricingDetails } from "@/types/product";
 
 interface Props {
   pricingDetails: IPricingDetails;

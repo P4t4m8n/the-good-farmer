@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useCartItem } from "./useCartItem";
+import { IPricingDetails, IProduct, IProductSmall } from "@/types/product";
 
 export const useProductBtn = (product: IProduct | IProductSmall) => {
   const productId = product._id!;

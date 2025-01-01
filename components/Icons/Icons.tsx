@@ -1,3 +1,5 @@
+import { TProductType } from "@/types/product";
+
 const LogoSvg = ({ style }: { style: string }) => {
   return (
     <svg

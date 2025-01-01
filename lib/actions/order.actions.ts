@@ -6,6 +6,7 @@ import { IOrderDocument } from "../db/models/order.model";
 import { ObjectId } from "mongodb";
 import { orderServerService } from "../services/server/order.server.service";
 import { AppError } from "../services/utils/AppError.server";
+import { IOrder, IOrderPayment } from "@/types/order";
 import xss from "xss";
 
 export const saveOrder = async (state: IOrder, formData: FormData) => {

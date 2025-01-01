@@ -1,3 +1,5 @@
+import { IAddress } from "@/types/address.types";
+
 const getEmpty = (userId?: string): IAddress => {
   return {
     _id: "",
@@ -5,13 +7,12 @@ const getEmpty = (userId?: string): IAddress => {
     state: "",
     zipCode: "",
     country: "",
-    street: {
-      name: "",
-      number: "",
-      floor: "",
-      entrance: "",
-      apartment: "",
-    },
+    streetName: "",
+    number: "",
+    floor: "",
+    entrance: "",
+    apartment: "",
+
     userId: userId || "",
   };
 };

@@ -1,6 +1,8 @@
 "use client";
 
 import { localStorageClientService } from "@/lib/services/client/localSession.service";
+import { ICartItem } from "@/types/cart";
+import { IPricingDetails, IProductSmall } from "@/types/product";
 import React, { createContext, FC, useEffect, useRef } from "react";
 
 interface Props {

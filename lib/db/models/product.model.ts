@@ -1,3 +1,4 @@
+import { IPricingDetails, TProductType } from "@/types/product";
 import { Document, ObjectId } from "mongodb";
 
 type TSeason = "spring" | "summer" | "fall" | "winter" | "year-round" | "none";

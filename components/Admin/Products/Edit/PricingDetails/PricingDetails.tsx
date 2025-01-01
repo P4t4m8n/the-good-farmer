@@ -1,3 +1,5 @@
+import { IPricingDetails } from "@/types/product";
+
 interface Props {
   pricingDetails: IPricingDetails;
 }
