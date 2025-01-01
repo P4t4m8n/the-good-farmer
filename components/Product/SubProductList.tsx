@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 import SubProductListItem from "./SubProductListItem";
+import { TProductType } from "@/types/product";
 
 interface Props {
   productType: TProductType;

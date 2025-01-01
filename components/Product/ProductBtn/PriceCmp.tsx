@@ -1,3 +1,5 @@
+import { IPricingDetails } from "@/types/product";
+
 interface Props {
   pricePerKilo: number;
   styleMode: "cart" | "card";

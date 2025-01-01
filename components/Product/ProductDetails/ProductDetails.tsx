@@ -2,6 +2,7 @@ import Image from "next/image";
 import ProductBtn from "../ProductBtn/ProductBtn";
 import DetailList from "./DetailList";
 import DetailItem from "./DetailItem";
+import { IProduct, IProductSmall } from "@/types/product";
 
 interface Props {
   product: IProduct;

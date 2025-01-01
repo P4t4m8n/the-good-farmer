@@ -6,6 +6,7 @@ import Link from "next/link";
 import { MouseEvent, useRef } from "react";
 import Button from "./Button";
 import AdminWrapper from "../Wrappers/AdminWrapper";
+import { IMenu, IMenuItem } from "@/types/app";
 
 interface Props {
   menuItems: IMenu;

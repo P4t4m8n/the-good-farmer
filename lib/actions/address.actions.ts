@@ -8,9 +8,10 @@ import {
 } from "../db/models/address.model";
 import { AppError } from "../services/utils/AppError.server";
 import { addressServerService } from "../services/server/address.server.service";
+import { IAddress, IAddressFilter } from "@/types/address.types";
 
 export const getAddresses = async (
-  filter: IAddressFIlter
+  filter: IAddressFilter
 ): Promise<IAddress[]> => {
   try {
     const addressCollection =

@@ -7,6 +7,8 @@ import QuantityTypeComponent from "./QuantityTypeComponent";
 import AmountChange from "./AmountChange";
 import PriceCmp from "./PriceCmp";
 import Button from "@/components/General/Button";
+import { IProductSmall } from "@/types/product";
+import { TStyleMode } from "@/types/app";
 
 interface Props {
   productSmall: IProductSmall;

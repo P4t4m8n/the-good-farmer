@@ -1,3 +1,4 @@
+import { IProductSmall, TProductStyleMode } from "@/types/product";
 import ProductPreview from "./ProductPreview";
 
 interface Props {

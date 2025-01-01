@@ -2,6 +2,7 @@ import { IProductDocument } from "@/lib/db/models/product.model";
 import { sanitizeService } from "../utils/sanitize.server";
 import { uploadImg } from "../client/uploadImg.client.service";
 import { ObjectId } from "mongodb";
+import { IPricingDetails, TProductType, TQuantityType, TSeason } from "@/types/product";
 
 const formDataToProductDto = async (
   formData: FormData

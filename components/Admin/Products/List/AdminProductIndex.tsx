@@ -1,3 +1,4 @@
+import { IProductSmall } from "@/types/product";
 import AdminProductFilter from "./AdminProductFilter";
 import AdminProductList from "./AdminProductList";
 import Link from "next/link";

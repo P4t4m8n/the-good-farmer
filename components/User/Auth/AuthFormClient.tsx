@@ -74,7 +74,7 @@ export default function AuthFormClient() {
   );
 }
 
-const LOGIN_INPUTS: TInput[] = [
+const LOGIN_INPUTS = [
   {
     type: "email",
     placeholder: "Email",
@@ -96,7 +96,7 @@ const LOGIN_INPUTS: TInput[] = [
   },
 ];
 
-const SIGN_UP_INPUTS: TInput[] = [
+const SIGN_UP_INPUTS = [
   ...LOGIN_INPUTS,
   {
     type: "text",

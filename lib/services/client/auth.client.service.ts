@@ -1,3 +1,4 @@
+import { IUser } from "@/types/user";
 import { apiClientService } from "./api.client.service";
 const BASE_URL = "auth/";
 

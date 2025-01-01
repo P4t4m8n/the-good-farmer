@@ -10,6 +10,7 @@ import {
 } from "react";
 
 import { authClientService } from "@/lib/services/client/auth.client.service";
+import { IUser } from "@/types/user";
 
 interface Props {
   children: React.ReactNode;

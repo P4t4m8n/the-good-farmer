@@ -1,5 +1,6 @@
 import { QUANTITY_TYPE } from "@/constants/products";
 import PricingIndex from "./PricingIndex";
+import { IPricingDetails } from "@/types/product";
 
 interface Props {
   pricingDetails: IPricingDetails[];

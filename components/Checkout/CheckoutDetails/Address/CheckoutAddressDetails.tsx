@@ -2,6 +2,8 @@ import EditAddress from "../../../Address/EditAddress";
 import { addressClientService } from "@/lib/services/client/address.client.service";
 import { useState } from "react";
 import CheckoutAddressList from "./CheckoutAddressList";
+import { IAddress } from "@/types/address.types";
+import { IOrder } from "@/types/order";
 
 interface Props {
   order: IOrder;

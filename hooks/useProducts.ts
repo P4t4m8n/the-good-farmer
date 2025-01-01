@@ -1,4 +1,5 @@
 import { getProducts } from "@/lib/actions/product.actions";
+import { IProductSmall, TProductType } from "@/types/product";
 import { useRef, useState } from "react";
 
 export const useProducts = (productType: TProductType, subProduct: string) => {

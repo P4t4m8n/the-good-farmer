@@ -1,3 +1,4 @@
+import { IUser, IUserDtoCreate } from "@/types/user";
 import { jwtVerify, SignJWT } from "jose";
 import { cookies } from "next/headers";
 import xss from "xss";
@@ -26,7 +27,6 @@ const getEmpty = (): IUser => {
     email: "",
     firstName: "",
     _id: "",
-    imgUrl: "",
     lastName: "",
   };
 };

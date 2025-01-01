@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ToggleAvailability from "../Shared/ToggleAvailability";
 import Link from "next/link";
+import { IProductSmall } from "@/types/product";
 
 interface Props {
   product: IProductSmall;

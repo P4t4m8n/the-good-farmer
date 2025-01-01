@@ -1,20 +1,7 @@
+import { IAddressBase } from "@/types/address.types";
 import { ObjectId } from "mongodb";
 
-interface IStreet {
-  name: string;
-  number: string;
-  floor?: string;
-  entrance?: string;
-  apartment?: string;
-}
-export interface IAddressDocument extends Document {
-  street: IStreet; // required
-  city: string; // required
-  state?: string;
-  zipCode?: string;
-  country: string; 
-  userId: ObjectId; // required
-}
+export interface IAddressDocument extends Document, IAddressBase {}
 
 export interface IAddressDtoCreate extends IAddressBase {
   userId: ObjectId;

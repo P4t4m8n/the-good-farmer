@@ -6,6 +6,7 @@ import { AppError } from "../services/utils/AppError.server";
 import { IProductDocument } from "../db/models/product.model";
 import xss from "xss";
 import { productServerService } from "../services/server/product.service";
+import { IProduct, IProductFilter, IProductSmall, TProductType } from "@/types/product";
 
 type MatchStage = {
   name?: { $regex: string; $options: string };

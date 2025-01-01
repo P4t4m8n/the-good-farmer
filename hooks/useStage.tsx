@@ -1,3 +1,4 @@
+import { TCheckoutStage } from "@/types/checkout";
 import { useRef, useState } from "react";
 
 export const useStage = () => {

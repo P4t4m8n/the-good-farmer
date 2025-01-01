@@ -7,6 +7,7 @@ import { getUserById } from "./user.actions";
 import { IUserDocument } from "../db/models/user.model";
 import { authServerService } from "../services/server/auth.server.service";
 import { AppError } from "../services/utils/AppError.server";
+import { IUser } from "@/types/user";
 
 export const signIn = async (
   _: unknown,

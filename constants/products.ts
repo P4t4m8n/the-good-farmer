@@ -1,4 +1,3 @@
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const PRODUCT_TYPE = [
   "vegetable",
   "fruit",
@@ -14,7 +13,6 @@ export const PRODUCT_TYPE = [
   "other",
 ] as const;
 
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const VEG_SUB_PRODUCT_TYPE = [
   "garden vegetables",
   "greens",
@@ -26,7 +24,6 @@ export const VEG_SUB_PRODUCT_TYPE = [
   "sea vegetables",
 ] as const;
 
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const FRUIT_SUB_PRODUCT_TYPE = [
   "berries",
   "citrus",
@@ -36,7 +33,6 @@ export const FRUIT_SUB_PRODUCT_TYPE = [
   "apples and pears",
 ] as const;
 
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const LEGUME_SUB_PRODUCT_TYPE = [
   "lentils",
   "peas",
@@ -44,7 +40,6 @@ export const LEGUME_SUB_PRODUCT_TYPE = [
   "other",
 ] as const;
 
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const SEASONS = [
   "spring",
   "summer",
@@ -53,7 +48,6 @@ export const SEASONS = [
   "year-round",
 ] as const;
 
-// Duplicate the const declarations in products.d.ts to avoid converting type files into modules
 export const QUANTITY_TYPE = [
   "lb",
   "oz",

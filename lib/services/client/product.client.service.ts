@@ -5,6 +5,7 @@ import {
   FRUIT_SUB_PRODUCT_TYPE,
   LEGUME_SUB_PRODUCT_TYPE,
 } from "@/constants/products";
+import { IProduct, TProductType } from "@/types/product";
 
 const getProductSubList = (type: TProductType): string[] => {
   switch (type) {

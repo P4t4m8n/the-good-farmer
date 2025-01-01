@@ -1,18 +1,30 @@
+import { IAddress } from "@/types/address.types";
+
 interface Props {
   address: IAddress;
 }
 export default function AddressItem({ address }: Props) {
-  const { street, city, state, country, zipCode } = address;
+  const {
+    streetName,
+    number,
+    floor,
+    apartment,
+    entrance,
+    city,
+    state,
+    country,
+    zipCode,
+  } = address;
   return (
     <div className="hover:cursor-pointer">
       <span className="flex gap-2 ">
-        <p>{street.name}</p>
-        <p>{street.number}</p>
+        <p>{streetName}</p>
+        <p>{number}</p>
       </span>
       <span className="flex gap-2">
-        {street.floor && <p>{`Floor ${street.floor}, `}</p>}
-        {street.apartment && <p>{`Apartment ${street.apartment}, `}</p>}
-        {street.entrance && <p>{`Entrance ${street.entrance}`}</p>}
+        {floor && <p>{`Floor ${floor}, `}</p>}
+        {apartment && <p>{`Apartment ${apartment}, `}</p>}
+        {entrance && <p>{`Entrance ${entrance}`}</p>}
       </span>
       <span className="flex hap-1">
         <p>{city}, </p>

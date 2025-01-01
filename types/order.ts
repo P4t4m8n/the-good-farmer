@@ -1,11 +1,16 @@
-declare type TOrderStatus =
+import { IAddress } from "./address.types";
+import { IEntity } from "./app";
+import { ICartItem } from "./cart";
+import { IUser } from "./user";
+
+export type TOrderStatus =
   | "pending"
   | "processing"
   | "shipped"
   | "delivered"
   | "cancelled";
 
-declare interface IOrder extends IEntity {
+export interface IOrder extends IEntity {
   user: IUser; //The user who made the order
   address: IAddress | null;
   deliveryDate: Date;
@@ -20,24 +25,24 @@ declare interface IOrder extends IEntity {
   userDetails: IUserDetails; //for who is the order. can be the user and the user can order for someone else
 }
 
-declare interface IUserDetails {
+export interface IUserDetails {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
 }
 
-declare interface IOrderFilter {
+export interface IOrderFilter {
   status?: TOrderStatus;
 }
 
-declare type TDelivery = {
+export type TDelivery = {
   date: string;
   time: string;
   day: string;
 };
 
-declare interface ICreditCard {
+export interface ICreditCard {
   cardNumber: string;
   cardHolder: string;
   expiryDate: string;
@@ -45,7 +50,7 @@ declare interface ICreditCard {
   orderId: string;
 }
 
-declare interface IOrderPayment {
+export interface IOrderPayment {
   authNum: string | null;
   type: "credit card" | "cash" | "other";
   paymentDate: Date | null;

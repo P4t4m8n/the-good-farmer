@@ -1,24 +1,26 @@
-declare interface IEntity {
+import { JSX } from "react";
+
+export interface IEntity {
   _id?: string;
 }
 
-declare interface IMenuItem extends IMenuBtn {
+export interface IMenuItem extends IMenuBtn {
   onClick?: () => void;
   link?: string;
   type: "link" | "btn" | "authLink" | "authBtn" | "adminLink" | "adminBtn";
 }
 
-declare interface IMenuBtn {
+export interface IMenuBtn {
   text?: string;
   iconSvg?: JSX.Element;
   imgUrl?: string;
   style: string;
 }
 
-declare interface IMenu {
+export interface IMenu {
   menuBtn: IMenuBtn;
   menuStyle: string;
   items: IMenuItem[];
 }
 
-declare type TStyleMode = "card" | "cart";
+export type TStyleMode = "card" | "cart";

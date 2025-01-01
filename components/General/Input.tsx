@@ -5,7 +5,7 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ divStyle, children, ...props }: Props) {
   return (
-    <div className={divStyle || "mb-4"}>
+    <div className={divStyle}>
       {children}
       <input
         {...props}

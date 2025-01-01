@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProductBtn from "../Product/ProductBtn/ProductBtn";
 import PriceCmp from "../Product/ProductBtn/PriceCmp";
+import { ICartItem } from "@/types/cart";
 
 interface Props {
   cartItem: ICartItem;

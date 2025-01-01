@@ -1,6 +1,7 @@
 import Input from "@/components/General/Input";
 import Label from "@/components/General/Label";
 import Select from "@/components/General/Select";
+import { IPricingDetails } from "@/types/product";
 import { ChangeEvent } from "react";
 
 interface Props {

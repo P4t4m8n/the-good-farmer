@@ -3,6 +3,7 @@ import CheckoutsHeader from "../CheckoutShared/CheckoutsHeader";
 import CheckoutsOverlay from "../CheckoutShared/CheckoutsOverlay";
 import CheckoutPrice from "../CheckoutPayment/CheckoutPrice";
 import Input from "@/components/General/Input";
+import { TCheckoutStage } from "@/types/checkout";
 
 interface Props {
   productsPrice: number;

@@ -1,5 +1,6 @@
 import AdminProductIndex from "@/components/Admin/Products/List/AdminProductIndex";
 import { getProducts } from "@/lib/actions/product.actions";
+import { IProductFilter, TProductType } from "@/types/product";
 
 export default async function AdminProductPage({
   searchParams,
@@ -17,13 +18,13 @@ export default async function AdminProductPage({
     else if (filter.isAvailableForSale === "false") isAvailableForSale = false;
   }
 
-  const products = (await getProducts({
+  const products = await getProducts({
     ...filter,
     productType: filter.productType as TProductType,
     skip: filter.skip ? +filter?.skip : 0,
     limit: filter.limit ? +filter?.limit : 10,
     isSmallProduct: true,
     isAvailableForSale: isAvailableForSale,
-  })) as IProductSmall[];
+  });
   return <AdminProductIndex products={products} />;
 }

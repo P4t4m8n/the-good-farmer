@@ -1,5 +1,6 @@
 import Input from "@/components/General/Input";
 import Label from "@/components/General/Label";
+import { IPricingDetails } from "@/types/product";
 
 interface Props {
   styleMode: "cart" | "card";

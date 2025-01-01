@@ -2,6 +2,7 @@ import { useRef } from "react";
 import ProductList from "./ProductList";
 import { useIntersectionObserver } from "@/hooks/UseIntersectionObserver";
 import { useProducts } from "@/hooks/useProducts";
+import { TProductType } from "@/types/product";
 
 interface Props {
   productType: TProductType;

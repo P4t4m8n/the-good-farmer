@@ -1,3 +1,5 @@
+import { IOrderPayment, IUserDetails, TOrderStatus } from "@/types/order";
+import { TQuantityType } from "@/types/product";
 import { Document, ObjectId } from "mongodb";
 
 export interface IOrderDocument extends Document {

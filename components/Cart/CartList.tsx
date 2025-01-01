@@ -1,3 +1,4 @@
+import { ICartItem } from "@/types/cart";
 import CartListItem from "./CartListItem";
 
 interface Props {

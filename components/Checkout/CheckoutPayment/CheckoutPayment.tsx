@@ -1,5 +1,6 @@
 import { deliveryClientService } from "@/lib/services/client/delivery.client.service";
 import CheckoutCreditCardForm from "./CheckoutCreditCardForm";
+import { IOrder } from "@/types/order";
 
 interface Props {
   order: Partial<IOrder>;
@@ -16,7 +17,7 @@ export default function CheckoutPayment({ order }: Props) {
   const { date, day, time } = deliveryClientService.formatDate(deliveryDate);
 
   const total = productsPrice + deliveryPrice;
-  const street = Object.values(address?.street || {}).join(" ");
+  const street = `${address?.streetName} ${address?.number}`;
 
   const deliverTo = `${userDetails.firstName} ${userDetails.lastName}`;
   return (

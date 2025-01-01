@@ -1,6 +1,7 @@
 import GeneralMenu from "@/components/General/GeneralMenu";
 import { iconService } from "@/components/Icons/Icons";
 import { useUser } from "@/hooks/useUser";
+import { IMenu, IMenuBtn, IMenuItem } from "@/types/app";
 import Link from "next/link";
 import React from "react";
 
